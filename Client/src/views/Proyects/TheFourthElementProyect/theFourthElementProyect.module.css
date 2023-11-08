@@ -1,0 +1,32 @@
+.articleTheFourthElement{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    flex-direction: row;
+}
+
+.backgroundIMG{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.divLeft{
+    width: 50%;
+}
+
+.sectionTheFourthElement{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1TheFourthElement{
+    width: 40vw;
+}
