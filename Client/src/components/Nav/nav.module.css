@@ -12,12 +12,12 @@
     z-index: 1;
 }
 
-.aNav{
-    text-decoration: none;
+.liNav{
     font-size: x-large;
     color: rgb(173, 154, 45);
     text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .navList{

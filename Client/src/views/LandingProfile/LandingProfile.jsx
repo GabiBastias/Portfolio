@@ -15,7 +15,7 @@ const LandingProfile = () => {
                 <div className={styles.divIMG}>
                     <img className={styles.profilePicture} src={profilePicture} alt='profileIMG'/>
                     <div className={styles.connections}>
-                        <a href="https://www.linkedin.com/in/federicobastias/ "target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.linkedin.com/in/federicobastias/" target="_blank" rel="noreferrer noopener">
                             <img className={styles.connectionLinkedIn} src={linkedIn} alt='LinkedIn'/>
                         </a>
                         <a href='https://github.com/GabiBastias' target="_blank" rel="noreferrer noopener">

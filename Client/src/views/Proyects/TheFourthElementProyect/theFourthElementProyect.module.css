@@ -20,6 +20,7 @@
 }
 
 .sectionTheFourthElement{
+    width: 50%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -29,4 +30,47 @@
 
 .h1TheFourthElement{
     width: 40vw;
+}
+
+.divImgP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.divImgP:hover{
+    .theFourthElementProyectIMG{
+        filter: blur(0.2rem) brightness(40%);
+        width: 45vw;
+    }
+    .pInfoTheFourthElement{
+        display: flex;
+    }
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    transition: 0.4s;
+    align-items: center;
+}
+
+.theFourthElementProyectIMG{
+    width: 35vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    transition: 0.4s;
+}
+
+.pInfoTheFourthElement{
+    width: 30vw;
+    position: absolute;
+    display: none;
+    transition: 0.4s;
+    font-size: larger;
 }
