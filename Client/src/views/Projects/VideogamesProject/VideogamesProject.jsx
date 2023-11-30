@@ -1,4 +1,4 @@
-import styles from './videogamesproject.module.css'
+import styles from './videogamesProject.module.css'
 import VideogamesIMG from '../../../assets/img/Videogames.png'
 import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
 
