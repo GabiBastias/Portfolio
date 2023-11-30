@@ -1,6 +1,6 @@
-import styles from './theFourthElementproject.module.css'
+import styles from './theFourthElementProject.module.css'
 import TheFourthElementIMG from '../../../assets/img/TheFourthElement.png'
-import TheFourthElementProjectIMG from '../../../assets/img/TheFourthElementproject.png'
+import TheFourthElementProjectIMG from '../../../assets/img/TheFourthElementProject.png'
 
 const TheFourthElementProject = () => {
     return(
