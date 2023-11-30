@@ -1,48 +1,41 @@
 [
-    {
-    "disc": "late Central",
-    "band": "A8 Philippine pitviper",
-    "genres": [],
-    "startDate": "1/11/2022 ",
-    "activeYears": 1,
-    "numbOfMembers": 10
-    },
-    {
-    "disc": "critical District",
-    "band": "Model S Western woma python",
+  {
+    "disc": "grand District",
+    "band": "XTS Malayan long-glanded coral snake",
     "genres": [
-        "Metal",
-        "Electronic",
-        "Classical",
-        "Blues",
-        "Soul",
-        "Classical"
+      "Hip Hop",
+      "Classical"
     ],
-    "startDate": "6/2/2007 ",
-    "activeYears": 8,
-    "numbOfMembers": 7
-    },
-    {
-    "disc": "faraway Global",
-    "band": "Taurus Keelback",
-    "genres": [
-        "Electronic",
-        "Latin",
-        "Rock"
-    ],
-    "startDate": "11/8/1957 ",
-    "activeYears": 29,
+    "startDate": "4/10/1980 ",
+    "activeYears": 10,
     "numbOfMembers": 6
-    },
-    {
-    "disc": "lavish Legacy",
-    "band": "Silverado North eastern king snake",
+  },
+  {
+    "disc": "modern Senior",
+    "band": "Ranchero Titanboa",
     "genres": [
-        "Rock",
-        "Stage And Screen"
+      "Metal",
+      "World",
+      "Reggae",
+      "Blues",
+      "Hip Hop"
     ],
-    "startDate": "9/7/1993 ",
-    "activeYears": 22,
-    "numbOfMembers": 9
-    }
+    "startDate": "25/3/2002 ",
+    "activeYears": 6,
+    "numbOfMembers": 3
+  },
+  {
+    "disc": "muted Lead",
+    "band": "Altima Tan racer",
+    "genres": [
+      "Reggae",
+      "Rock",
+      "Latin",
+      "Soul",
+      "Stage And Screen"
+    ],
+    "startDate": "19/0/1991 ",
+    "activeYears": 4,
+    "numbOfMembers": 4
+  }
 ]

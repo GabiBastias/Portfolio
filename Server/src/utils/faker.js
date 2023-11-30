@@ -4,6 +4,7 @@ const path = require("path")
 
 const createDisc = async () => {
     try {
+        let data = [];
         const startingYear = faker.number.int({ min: 1920, max: 1998})
         const dateNowYear = new Date().getFullYear();
         const fakeGenres = [];
@@ -26,13 +27,24 @@ const createDisc = async () => {
             numbOfMembers: faker.number.int({ min: 1, max: 10 })    
         }
 
-        const jsonData = JSON.stringify(randomDisc, null, 2);
-
         const filePath = path.join(__dirname, "../assets/json/artist.json");
-        
-        await fs.appendFile(filePath, `,${jsonData}\n`);
-        if (jsonData) return jsonData;
-        else throw Error("Can't be possible writte the file.")
+        const fileData = await fs.readFile(filePath, "utf-8");
+        console.log(fileData.length);
+        if (fileData.length === 0) {
+            console.log("hola");
+            const jsonData = JSON.stringify(randomDisc, null, 2);
+            await fs.writeFile(filePath, `[\n${jsonData}\n]`);
+            if (jsonData) return jsonData;
+        } else {
+            console.log("chau");
+            data = JSON.parse(fileData);
+            data.push(randomDisc);
+            const jsonData = JSON.stringify(data, null, 2);
+            // await fs.appendFile(filePath, `,${jsonData}\n`);
+            await fs.writeFile(filePath, data.length === 0 ? `[${jsonData}]`: jsonData)
+            if (jsonData) return jsonData;
+        }
+        throw Error("Can't be possible writte the file.")
     } catch (error) {
         return error.message;
     }
