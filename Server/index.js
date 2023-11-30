@@ -3,6 +3,5 @@ const app = require('./src/app');
 const { PORT, URL } = process.env;
 
 app.listen(PORT, () => {
-    console.log(PORT);
     console.log(`Server: ${URL}`);
 })

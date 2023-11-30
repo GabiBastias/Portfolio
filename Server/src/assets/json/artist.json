@@ -1,0 +1,48 @@
+[
+    {
+    "disc": "late Central",
+    "band": "A8 Philippine pitviper",
+    "genres": [],
+    "startDate": "1/11/2022 ",
+    "activeYears": 1,
+    "numbOfMembers": 10
+    },
+    {
+    "disc": "critical District",
+    "band": "Model S Western woma python",
+    "genres": [
+        "Metal",
+        "Electronic",
+        "Classical",
+        "Blues",
+        "Soul",
+        "Classical"
+    ],
+    "startDate": "6/2/2007 ",
+    "activeYears": 8,
+    "numbOfMembers": 7
+    },
+    {
+    "disc": "faraway Global",
+    "band": "Taurus Keelback",
+    "genres": [
+        "Electronic",
+        "Latin",
+        "Rock"
+    ],
+    "startDate": "11/8/1957 ",
+    "activeYears": 29,
+    "numbOfMembers": 6
+    },
+    {
+    "disc": "lavish Legacy",
+    "band": "Silverado North eastern king snake",
+    "genres": [
+        "Rock",
+        "Stage And Screen"
+    ],
+    "startDate": "9/7/1993 ",
+    "activeYears": 22,
+    "numbOfMembers": 9
+    }
+]

@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const routerArtists = require('./routes/artists');
+const router = require('./routes');
 const { URL } = process.env;
 
 
@@ -16,6 +17,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/artists', routerArtists);
+app.use('/index', router);
+app.use('/artist', routerArtists);
 
 module.exports = app;
