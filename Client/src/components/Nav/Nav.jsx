@@ -9,7 +9,7 @@ const Nav = ({ scrollToPage }) => {
             <ul className={styles.navList}>
                 <li className={styles.liNav} onClick={() => scrollToPage('Home')}>Home</li>
                 <li className={styles.liNav} onClick={() => scrollToPage('About')}>About Me!</li>
-                <li className={styles.liNav} onClick={() => scrollToPage('Proyects')}>Proyects</li>
+                <li className={styles.liNav} onClick={() => scrollToPage('Projects')}>Projects</li>
             </ul>
         </nav>
     )

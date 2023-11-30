@@ -1,41 +1,36 @@
 [
   {
-    "disc": "grand District",
-    "band": "XTS Malayan long-glanded coral snake",
-    "genres": [
-      "Hip Hop",
-      "Classical"
+    "band": "Model X Nicobar bamboo pitviper",
+    "disc": [
+      "negligible Senior",
+      "apprehensive Senior",
+      "bouncy Customer",
+      "gaseous District"
     ],
-    "startDate": "4/10/1980 ",
-    "activeYears": 10,
-    "numbOfMembers": 6
-  },
-  {
-    "disc": "modern Senior",
-    "band": "Ranchero Titanboa",
     "genres": [
-      "Metal",
-      "World",
-      "Reggae",
-      "Blues",
-      "Hip Hop"
+      "Pop",
+      "Stage And Screen",
+      "Country",
+      "Metal"
     ],
-    "startDate": "25/3/2002 ",
-    "activeYears": 6,
+    "startDate": "9/4/1982 ",
+    "activeYears": 35,
     "numbOfMembers": 3
   },
   {
-    "disc": "muted Lead",
-    "band": "Altima Tan racer",
-    "genres": [
-      "Reggae",
-      "Rock",
-      "Latin",
-      "Soul",
-      "Stage And Screen"
+    "band": "Roadster Zebra snake",
+    "disc": [
+      "pale Future",
+      "spotless Future",
+      "wrathful Forward"
     ],
-    "startDate": "19/0/1991 ",
-    "activeYears": 4,
+    "genres": [
+      "Stage And Screen",
+      "Metal",
+      "Latin"
+    ],
+    "startDate": "28/10/2009 ",
+    "activeYears": 7,
     "numbOfMembers": 4
   }
 ]

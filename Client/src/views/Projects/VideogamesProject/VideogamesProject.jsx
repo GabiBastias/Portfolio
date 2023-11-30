@@ -1,8 +1,8 @@
-import styles from './videogamesProyect.module.css'
+import styles from './videogamesproject.module.css'
 import VideogamesIMG from '../../../assets/img/Videogames.png'
-import VideogamesProyectIMG from '../../../assets/img/VideogamesProyect.png'
+import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
 
-const VideogamesProyect = () => {
+const VideogamesProject = () => {
     return(
         <article className={styles.articleVideogames}>
             <img className={styles.backgroundIMG} src={VideogamesIMG} alt="Videogames" />
@@ -12,8 +12,8 @@ const VideogamesProyect = () => {
                 <h2 className={styles.h1Videogames}>Videogames</h2>
                 <div className={styles.divImgP}>
                     <a href="https://videogames-fgdev.vercel.app/" target="_blank" rel="noreferrer noopener" className={styles.link}>
-                        <img className={styles.videogamesProyectIMG} src={VideogamesProyectIMG} alt="VideogamesProyectIMG" />
-                        <p className={styles.pInfoVideogamesProyect}>Es un proyecto que te muestra juegos y puedes buscarlos por nombre o ID. La API del proyecto tiene mas de 500.000 juegos. Tambien puedes crear tu propio juego.</p>
+                        <img className={styles.videogamesProjectIMG} src={VideogamesProjectIMG} alt="VideogamesprojectIMG" />
+                        <p className={styles.pInfoVideogamesProject}>Es un projecto que te muestra juegos y puedes buscarlos por nombre o ID. La API del projecto tiene mas de 500.000 juegos. Tambien puedes crear tu propio juego.</p>
                     </a>
                 </div>
             </section>
@@ -21,4 +21,4 @@ const VideogamesProyect = () => {
     )
 }
 
-export default VideogamesProyect;
+export default VideogamesProject;

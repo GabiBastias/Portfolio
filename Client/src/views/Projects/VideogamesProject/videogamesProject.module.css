@@ -39,11 +39,11 @@
 }
 
 .divImgP:hover{
-    .videogamesProyectIMG{
+    .videogamesProjectIMG{
         filter: blur(0.2rem) brightness(40%);
         width: 45vw;
     }
-    .pInfoVideogamesProyect{
+    .pInfoVideogamesProject{
         display: flex;
     }
 }
@@ -57,14 +57,14 @@
     align-items: center;
 }
 
-.videogamesProyectIMG{
+.videogamesProjectIMG{
     width: 35vw;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     transition: 0.4s;
 }
 
-.pInfoVideogamesProyect{
+.pInfoVideogamesProject{
     width: 30vw;
     position: absolute;
     display: none;

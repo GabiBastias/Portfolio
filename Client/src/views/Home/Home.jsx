@@ -1,7 +1,7 @@
 import About from '../About/About';
 import LandingProfile from '../LandingProfile/LandingProfile';
-import VideogamesProyect from '../Proyects/VideogamesProyect/VideogamesProyect';
-import TheFourthElementProyect from '../Proyects/TheFourthElementProyect/TheFourthElementProyect';
+import VideogamesProyect from '../Projects/VideogamesProject/VideogamesProject';
+import TheFourthElementProyect from '../Projects/TheFourthElementProject/TheFourthElementProyect';
 import styles from './home.module.css'
 
 const Home = () => {

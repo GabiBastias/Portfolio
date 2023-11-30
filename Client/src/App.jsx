@@ -2,8 +2,8 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import LandingProfile from './views/LandingProfile/LandingProfile'
 import About from './views/About/About'
-import TheFourthElementProyect from './views/Proyects/TheFourthElementProyect/TheFourthElementProyect'
-import VideogamesProyect from './views/Proyects/VideogamesProyect/VideogamesProyect'
+import TheFourthElementProject from './views/Projects/TheFourthElementProject/TheFourthElementProject'
+import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
 
 function App() {
 
@@ -26,11 +26,11 @@ function App() {
           <div className="divScroll" id='About'>
               <About/>
           </div>
-          <div className="divScroll" id='Proyects'>
-              <TheFourthElementProyect/>
+          <div className="divScroll" id='Projects'>
+              <TheFourthElementProject/>
           </div>
           <div className="divScroll">
-              <VideogamesProyect/>
+              <VideogamesProject/>
           </div>
       </main>
     </>

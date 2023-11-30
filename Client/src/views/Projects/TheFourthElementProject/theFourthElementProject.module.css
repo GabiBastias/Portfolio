@@ -42,7 +42,7 @@
 }
 
 .divImgP:hover{
-    .theFourthElementProyectIMG{
+    .theFourthElementProjectIMG{
         filter: blur(0.2rem) brightness(40%);
         width: 45vw;
     }
@@ -60,7 +60,7 @@
     align-items: center;
 }
 
-.theFourthElementProyectIMG{
+.theFourthElementProjectIMG{
     width: 35vw;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
