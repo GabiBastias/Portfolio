@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const routerArtists = require('./routes/artists');
+const routerFakeBands = require('./routes/fakeBands');
 const router = require('./routes');
 const { URL } = process.env;
 
@@ -18,6 +18,6 @@ app.use((req, res, next) => {
 });
 
 app.use('/index', router);
-app.use('/artist', routerArtists);
+app.use('/fakeBands', routerFakeBands);
 
 module.exports = app;

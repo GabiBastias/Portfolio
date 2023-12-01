@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const createDisc = require("../utils/faker");
+const createFakeBand = require("../utils/faker");
 
 router.get("/faker", async(req, res, next) => {
     try {
-        const fak = await createDisc();
+        const fak = await createFakeBand();
         if (fak) return res.status(200).send(fak);
         else throw new Error("Error en la consulta")
     } catch (error) {
