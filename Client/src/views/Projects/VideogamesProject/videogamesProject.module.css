@@ -65,9 +65,21 @@
 }
 
 .pInfoVideogamesProject{
+    color: white;
     width: 30vw;
     position: absolute;
     display: none;
     transition: 0.4s;
+    z-index: 1;
     font-size: larger;
 }
+
+/* .divRight{
+    border: 2px solid green;
+    width: 50%;
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */

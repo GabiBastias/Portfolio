@@ -4,6 +4,8 @@ import LandingProfile from './views/LandingProfile/LandingProfile'
 import About from './views/About/About'
 import TheFourthElementProject from './views/Projects/TheFourthElementProject/TheFourthElementProject'
 import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
+import ContactForm from './components/ContactForm/ContactForm'
+import APIShower from './components/APIShower/APIShower'
 
 function App() {
 
@@ -24,13 +26,23 @@ function App() {
               <LandingProfile />
           </div>
           <div className="divScroll" id='About'>
-              <About/>
+              <About />
           </div>
           <div className="divScroll" id='Projects'>
-              <TheFourthElementProject/>
+              <TheFourthElementProject />
           </div>
           <div className="divScroll">
-              <VideogamesProject/>
+              <VideogamesProject />
+          </div>
+          <div className="divScroll">
+            <div className='blank'>
+              <ContactForm />
+            </div>
+          </div>
+          <div className="divScroll">
+            <div className='blank'>
+              <APIShower />
+            </div>
           </div>
       </main>
     </>
