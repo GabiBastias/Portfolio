@@ -36,12 +36,12 @@ function App() {
           </div>
           <div className="divScroll">
             <div className='blank'>
-              <ContactForm />
+              <APIShower />
             </div>
           </div>
-          <div className="divScroll">
+          <div className="divScroll" id='Contact'>
             <div className='blank'>
-              <APIShower />
+              <ContactForm />
             </div>
           </div>
       </main>

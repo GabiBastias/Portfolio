@@ -34,15 +34,18 @@
 }
 
 .h1About{
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
     width: 40vw;
 }
 
 .h4Aboout{
-    
+    color: rgb(173, 154, 45);
+    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     width: 70%;
 }
 
 .infoAbout{
+    color: rgb(173, 154, 45);
+    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     width: 70%;
-    
 }

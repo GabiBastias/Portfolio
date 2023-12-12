@@ -1,5 +1,5 @@
 import styles from './videogamesProject.module.css'
-import VideogamesIMG from '../../../assets/img/Videogames.png'
+import VideogamesIMG from '../../../assets/img/VideogamesBlack.png'
 import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
 
 const VideogamesProject = () => {

@@ -29,6 +29,7 @@
 }
 
 .h1Home{
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
     width: 40vw;
 }
 
@@ -40,7 +41,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     transition: 0.3s;
     &:hover{
-        background-color: rgba(255, 119, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.8);
         width: 20vw;
         & .profilePicture{
             filter: none;
@@ -48,11 +49,8 @@
         }
         & .connections{
             width: 20vw;
-            & .connectionLinkedIn{
+            & .connectionLogo{
                 filter: none
-            }
-            & .connectionGitHub{
-                filter: none;
             }
         }
     }
@@ -63,21 +61,11 @@
     transition: 0.3s;
 }
 
-.connectionLinkedIn {
+.connectionLogo {
     filter: grayscale(100%);
     height: 50px;
     width: 50px;
     padding: 0px;
-    cursor: pointer;
-    border-radius: 100%;
-}
-
-.connectionGitHub {
-    filter: grayscale(100%);
-    height: 50px;
-    width: 50px;
-    padding: 0px;
-    border-radius: 100%;
     cursor: pointer;
 }
 

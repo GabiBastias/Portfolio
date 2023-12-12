@@ -1,5 +1,5 @@
 import styles from './about.module.css'
-import AboutIMG from '../../assets/img/About.png'
+import AboutIMG from '../../assets/img/AboutBlack.png'
 import { useState } from 'react';
 
 const About = () => {
