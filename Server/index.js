@@ -5,5 +5,5 @@ const mongoDBConnect = require('./src/mongoDBConnect');
 
 app.listen(PORT, async() => {
     await mongoDBConnect();
-    console.log(`Server: ${URL}${PORT}`);
+    console.log(`Server: ${PORT}`);
 })

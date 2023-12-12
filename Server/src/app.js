@@ -17,6 +17,11 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/', (req, res, next) => {
+    res.status(200).send({
+        message: 'Welcome to the Backend'
+    });
+})
 app.use('/index', router);
 app.use('/fakeBands', routerFakeBands);
 
