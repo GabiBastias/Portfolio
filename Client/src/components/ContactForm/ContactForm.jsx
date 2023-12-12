@@ -1,7 +1,7 @@
 import emailJS from '@emailjs/browser';
 import { useRef, useState } from "react";
 import validator from '../../services/validator/inputValidator';
-// import styles from "./contactForm.module.css";
+import styles from "./contactForm.module.css";
 const serviceEmailID = import.meta.env.VITE_SERVICE_EMAILJS_ID;
 const templateEmailID = import.meta.env.VITE_TEMPLATE_EMAILJS_ID;
 const keyEmailID = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
@@ -35,50 +35,54 @@ const ContactForm = () => {
     }
 
     return(
-        <>
-            <form ref={form} onSubmit={handleOnSubmit}>
-                <label name='user_email'>Email: </label>
-                <input 
-                    type="text" 
-                    name="user_email" 
-                    value={userMessage.user_email} 
-                    placeholder="Your email..."
-                    onChange={handleChange}
-                />
-                <br />
-                {
-                    errors.user_email ? <span>{errors.user_email}</span> : null
-                }
-                <br />
-                <label name='user_name'>Name: </label>
-                <input 
-                    type="text" 
-                    name="user_name" 
-                    value={userMessage.user_name} 
-                    placeholder="Your name..."
-                    onChange={handleChange}
-                />
-                <br />
-                {
-                    errors.user_name ? <span>{errors.user_name}</span> : null
-                }
-                <label name='message'>Message: </label>
-                <br />
-                <textarea 
-                    placeholder="Your message..." 
-                    cols="30" rows="10" 
-                    name="message" 
-                    value={userMessage.description}
-                    onChange={handleChange}
-                ></textarea>
-                <br />
-                {
-                    errors.message ? <span>{errors.message}</span> : null
-                }
-                <br />
-                <input type="submit" value="Send" />
+        <article className={styles.articleContactMe}>
+            <form className={styles.formContactMe} ref={form} onSubmit={handleOnSubmit}>
+                <fieldset className={styles.fieldsetContactMe}>
+                    <legend className={styles.leyendContactMe}><b>Contact Me!</b></legend>
+                    <label className={styles.labelContactMe} name='user_email'>Email: </label>
+                    <input 
+                        type="text" 
+                        name="user_email" 
+                        value={userMessage.user_email} 
+                        placeholder="Your email..."
+                        onChange={handleChange}
+                    />
+                    <br />
+                    {
+                        errors.user_email ? <span className={styles.spanContactMe}>{errors.user_email}</span> : null
+                    }
+                    <br />
+                    <label className={styles.labelContactMe} name='user_name'>Name: </label>
+                    <input 
+                        type="text" 
+                        name="user_name" 
+                        value={userMessage.user_name} 
+                        placeholder="Your name..."
+                        onChange={handleChange}
+                    />
+                    <br />
+                    {
+                        errors.user_name ? <span className={styles.spanContactMe}>{errors.user_name}</span> : null
+                    }
+                    <label className={styles.labelContactMe} name='message'>Message: </label>
+                    <br />
+                    <textarea 
+                        placeholder="Your message..." 
+                        cols="30" rows="10" 
+                        name="message" 
+                        value={userMessage.description}
+                        onChange={handleChange}
+                        className={styles.inputContactMe}
+                    ></textarea>
+                    <br />
+                    {
+                        errors.message ? <span className={styles.spanContactMe}>{errors.message}</span> : null
+                    }
+                    <br />
+                    <input type="submit" value="Send" />
+                </fieldset>
             </form>
-        </>
+        </article>
     )
 }
 

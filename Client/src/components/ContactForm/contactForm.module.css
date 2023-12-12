@@ -1,0 +1,49 @@
+.articleContactMe{
+    background-color: #000000;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContactMe{
+    display: flex;
+}
+
+.fieldsetContactMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: 0.4s;
+    width: 50vw;
+    height: 50vh;
+    &:hover{
+        box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
+    }
+}
+
+.leyendContactMe{
+    font-size: xx-large;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
+}
+
+.inputContactMe{
+    border-radius: 5px;
+}
+
+.spanContactMe{
+    color: rgb(173, 154, 45);
+    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.labelContactMe{
+    font-size: x-large;
+}

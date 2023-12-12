@@ -45,6 +45,7 @@
 }
 
 .data{
+    margin: 0;
     display: flex;
     padding: 1rem;
 }
