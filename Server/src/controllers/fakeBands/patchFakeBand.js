@@ -4,7 +4,6 @@ const patchFakeBand = async(req, res, next) => {
     const { id } = req.query
     const { body } = req;
     try {
-        console.log(body);
         if (!body) throw Error("Nothing to patch here.");
         if (body.activeYears) throw Error("If you want to update the active years only need to patch the start date.");
         

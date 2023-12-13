@@ -32,7 +32,6 @@ const createFakeBand = async (json) => {
         if (json) {
             const filePath = path.join(__dirname, "../assets/json/artist.json");
             const fileData = await fs.readFile(filePath, "utf-8");
-            console.log(fileData.length);
             if (fileData.length === 0) {
                 const jsonData = JSON.stringify(randomDisc, null, 2);
                 await fs.writeFile(filePath, `[\n${jsonData}\n]`);

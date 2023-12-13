@@ -3,7 +3,6 @@ import LandingProfile from '../LandingProfile/LandingProfile';
 import VideogamesProyect from '../Projects/VideogamesProject/VideogamesProject';
 import TheFourthElementProyect from '../Projects/TheFourthElementProject/TheFourthElementProyect';
 import styles from './home.module.css'
-import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Home = () => {
     return(
