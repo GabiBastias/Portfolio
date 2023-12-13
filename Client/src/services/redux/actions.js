@@ -20,7 +20,7 @@ export const getAllFakeBands = () => {
 export const getBandById = (id) => {
     return async (dispatch) => {
         try {
-            const response = await fetch(`${backURL}/fakebands?id=${id}`)
+            const response = await fetch(`${backURL}/fakebands/${id}`)
             .then(res => res.json());
             if (response.error) throw Error(response.error)
             return dispatch({
