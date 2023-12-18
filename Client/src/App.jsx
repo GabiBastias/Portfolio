@@ -6,6 +6,9 @@ import TheFourthElementProject from './views/Projects/TheFourthElementProject/Th
 import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
 import ContactForm from './components/ContactForm/ContactForm'
 import APIShower from './components/APIShower/APIShower'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { getAllFakeGenres } from './services/redux/actions'
 
 function App() {
 
@@ -15,6 +18,12 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllFakeGenres());
+  },[dispatch])
 
   return (
     <>

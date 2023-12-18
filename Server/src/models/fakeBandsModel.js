@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 const FakeBandsSchema = new mongoose.Schema({
     band: {
-        type: String
+        type: String,
+        require: true
     },
     discs: {
         type: Array

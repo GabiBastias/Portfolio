@@ -11,7 +11,7 @@ const inputCreateValidator = (data) => {
         errors.bandName = "Name can't be empty or consist of only whitespace."
     }
 
-    if (data.bandDiscs < 1) {
+    if (data.bandDiscs.length < 1) {
         errors.bandDiscs = "Please insert at least one Disc name."
     }
 

@@ -4,6 +4,7 @@ const app = express();
 const morgan = require('morgan');
 const routerFakeBands = require('./routes/fakeBands');
 const router = require('./routes');
+const routerFakeGenres = require('./routes/fakeGenres');
 const { URL } = process.env;
 
 
@@ -19,5 +20,6 @@ app.use((req, res, next) => {
 
 app.use('/index', router);
 app.use('/fakeBands', routerFakeBands);
+app.use('/fakeGenres', routerFakeGenres);
 
 module.exports = app;

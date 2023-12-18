@@ -1,8 +1,9 @@
-import { ALL_BANDS, BANDS_BY_ID, CREATE_RANDOM_BAND, DELETE_BAND } from "./actionTypes";
+import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND } from "./actionTypes";
 
 const initialState = {
     allBandsCopy: [],
     allBands: [],
+    allGenres: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -13,6 +14,11 @@ const reducer = (state = initialState, action) => {
                 allBandsCopy: [...action.payload],
                 allBands: [...action.payload]
             }
+        case ALL_GENRES:
+            return {
+                ...state,
+                allGenres: [...action.payload] 
+            }
         case BANDS_BY_ID:
             return {
                 ...state,
@@ -22,6 +28,11 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 allBands: action.payload
+            }
+        case CREATE_RANDOM_BAND_BY_BODY:
+            return{
+                ...state,
+                allBands: [...state.allBands, action.payload]
             }
         case DELETE_BAND:
             return{

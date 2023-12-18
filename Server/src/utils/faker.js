@@ -1,6 +1,7 @@
 const { faker } = require('@faker-js/faker');
 const fs = require("node:fs/promises");
-const path = require("path")
+const path = require("path");
+const FakeGenre = require('../models/fakeGenresModel');
 
 const createFakeBand = async (json) => {
     try {
@@ -51,4 +52,30 @@ const createFakeBand = async (json) => {
     }
 }
 
-module.exports = createFakeBand;
+const fakeGenres = async() => {
+    try {
+        const genresList = {};
+        for (let i = 0; i < 18; i++) {
+            let aux = 0;
+            const newGenre = faker.music.genre();
+            for (const genre in genresList) {
+                if (genresList[genre] === newGenre) aux = 1;
+            }
+            if (aux) {
+                i--;
+                continue;
+            } else {
+                genresList[i] = newGenre;
+                await FakeGenre.create({name: newGenre});
+            }
+        }
+        return await genresList
+    } catch (error) {
+        return error.message;
+    }
+}
+
+module.exports = {
+    createFakeBand,
+    fakeGenres
+};
