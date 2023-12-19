@@ -1,5 +1,5 @@
 const FakeBand = require("../../models/fakeBandsModel");
-const createFakeBand = require("../../utils/faker");
+const { createFakeBand } = require("../../utils/faker");
 
 
 const createRandomFakeBand = async(req, res, next) => {

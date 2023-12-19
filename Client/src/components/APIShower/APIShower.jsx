@@ -19,113 +19,44 @@ const APIShower = () => {
         dispatch(getAllFakeBands());
     }
 
-    const handleCreate = (type) => {
-        const divAPIFormCreate = document.getElementById("create");
-        const divAPIFormUpdate = document.getElementById("update");
-        const divAPIFormPatch = document.getElementById("patch");
-        switch (type) {
-            case "create":{
-                
-                if (divAPIFormCreate.classList.value === "show") {
-                    divAPIFormCreate.classList.remove('show');
-                    divAPIFormCreate.classList.add('showOrNot');
-                } else if (divAPIFormCreate.classList.value === "showOrNot") {
-                    divAPIFormCreate.classList.remove('showOrNot');
-                    divAPIFormCreate.classList.add('show');
-                }
-                divAPIFormUpdate.classList.remove('show');
-                divAPIFormUpdate.classList.add('showOrNot');
-                divAPIFormPatch.classList.remove('show');
-                divAPIFormPatch.classList.add('showOrNot');
-                break;
-            }
-            case "update":{
-                
-                if (divAPIFormUpdate.classList.value === "show") {
-                    divAPIFormUpdate.classList.remove('show');
-                    divAPIFormUpdate.classList.add('showOrNot');
-                } else if (divAPIFormUpdate.classList.value === "showOrNot") {
-                    divAPIFormUpdate.classList.remove('showOrNot');
-                    divAPIFormUpdate.classList.add('show');
-                }
-                divAPIFormCreate.classList.remove('show');
-                divAPIFormCreate.classList.add('showOrNot');
-                divAPIFormPatch.classList.remove('show');
-                divAPIFormPatch.classList.add('showOrNot');
-                break;
-            }
-            case "patch":{
-                
-                if (divAPIFormPatch.classList.value === "show") {
-                    divAPIFormPatch.classList.remove('show');
-                    divAPIFormPatch.classList.add('showOrNot');
-                } else if (divAPIFormPatch.classList.value === "showOrNot") {
-                    divAPIFormPatch.classList.remove('showOrNot');
-                    divAPIFormPatch.classList.add('show');
-                }
-                divAPIFormCreate.classList.remove('show');
-                divAPIFormCreate.classList.add('showOrNot');
-                divAPIFormUpdate.classList.remove('show');
-                divAPIFormUpdate.classList.add('showOrNot');
-                break;
-            }
-        
-            default:
-                divAPIFormCreate.classList.remove('show');
-                divAPIFormCreate.classList.add('showOrNot');
-                divAPIFormUpdate.classList.remove('show');
-                divAPIFormUpdate.classList.add('showOrNot');
-                divAPIFormPatch.classList.remove('show');
-                divAPIFormPatch.classList.add('showOrNot');
-                break;
-        }    
-    }
-
     return(
         <article className={styles.articleAPIShower}>
             <div className={styles.divLeft}>
                 <h2 className={styles.h2APIShower}>Fake Band API-REST:</h2>
-                <div className={styles.divOptions}>
-                    <div className={styles.divPetitions}>
-                        <label>Get all Fake Bands </label>
-                        <button onClick={handleBands}>X</button>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Get Band by ID: </label>
-                        <input onChange={handleChange} name="id" value={id} type="text" placeholder="Insert the ID..."/>
-                        <button onClick={() => {dispatch(getBandById(id)); setId("")}}>X</button>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Create Random Fake Band </label>
-                        <button onClick={() => dispatch(createRandomFakeBand())}>X</button>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Create Fake Band </label>
-                        <button onClick={() => handleCreate("create")}>X</button>
-                    </div>
-                    <div className="showOrNot" id="create">
-                        <APIForm name={"Create Fake Band"}/>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Update complete Fake Band (PUT) </label>
-                        <button onClick={() => handleCreate("update")}>X</button>
-                    </div>
-                    <div className="showOrNot" id="update">
-                        <APIForm name={"Update Fake Band"}/>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Update some Fake Band field (PATCH) </label>
-                        <button onClick={() => handleCreate("patch")}>X</button>
-                    </div>
-                    <div className="showOrNot" id="patch">
-                        <APIForm name={"Patch Fake Band"}/>
-                    </div>
-                    <div className={styles.divPetitions}>
-                        <label>Delete Band by ID: </label>
-                        <input type="text" onChange={handleChange} name="deleteId" value={deleteId}placeholder="Insert the ID..."/>
-                        <button onClick={() => {dispatch(deleteFakeBandById(deleteId)); setDeleteId("")}}>X</button>
-                    </div>
-                </div>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Get all Fake Bands </summary>
+                    <br />
+                    <button onClick={handleBands}>Get all Fake Bands</button>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Get Band by ID </summary>
+                    <br />
+                    <input onChange={handleChange} name="id" value={id} type="text" placeholder="Insert the ID..."/>
+                    <button onClick={() => {dispatch(getBandById(id)); setId("")}}>X</button>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Create Random Fake Band </summary>
+                    <br />
+                    <button onClick={() => dispatch(createRandomFakeBand())}>Create Random Fake Band</button>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Create Fake Band </summary>
+                    <APIForm/>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Update complete Fake Band (PUT) </summary>
+                    <APIForm/>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Update some Fake Band field (PATCH) </summary>
+                    <APIForm/>
+                </details>
+                <details className={styles.detailsAPISh} name="fakeBand">
+                    <summary>Delete Band by ID </summary>
+                    <br />
+                    <input type="text" onChange={handleChange} name="deleteId" value={deleteId}placeholder="Insert the ID..."/>
+                    <button onClick={() => {dispatch(deleteFakeBandById(deleteId)); setDeleteId("")}}>X</button>
+                </details>
             </div>
             <section className={styles.sectionAPIShower}>
                 <div className={styles.divView}>

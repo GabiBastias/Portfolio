@@ -4,7 +4,7 @@ import inputCreateValidator from "../../services/validator/inputAPICreateValidat
 import { useDispatch, useSelector } from "react-redux";
 import { createRandomFakeBandByBody, getAllFakeGenres } from "../../services/redux/actions";
 
-const APIForm = ({name}) => {
+const APIForm = () => {
 
     const dispatch = useDispatch();
     const allGenres = useSelector(state => state.allGenres);
@@ -26,7 +26,9 @@ const APIForm = ({name}) => {
         setBand({...band, bandDiscs: [...band.bandDiscs, findId.value]})
     }
 
-    console.log(band);
+    useEffect(() => {
+        console.log(band.bandDiscs);
+    },[band])
 
     const handleGenres = (event) => {
         const genresId = document.getElementById(event.target.id);
@@ -52,9 +54,7 @@ const APIForm = ({name}) => {
         }
     }
 
-    
-
-    const handleSubmit = (type) => {
+    const handleSubmit = (type, event) => {
         dispatch(getAllFakeGenres())
         event.preventDefault();
         console.log(type);
@@ -79,17 +79,18 @@ const APIForm = ({name}) => {
         <form className={styles.formCreateBand} onSubmit={() => handleSubmit(name)}>
                         
             <fieldset className={styles.fieldsetCreateBand}>
-                <legend>{name}</legend>
-                <label>Band Name</label>
-                <input 
-                    type="text" 
-                    name="bandName"
-                    value={band.bandName}
-                    onChange={handleChange}
-                />
-                {
-                    errors?.bandName ? <span className={styles.spanErrors}>{errors.bandName}</span> : null
-                }
+                <div className={styles.divName}>
+                    <label>Band Name</label>
+                    <input 
+                        type="text" 
+                        name="bandName"
+                        value={band.bandName}
+                        onChange={handleChange}
+                    />
+                    {
+                        errors?.bandName ? <span className={styles.spanErrors}>{errors.bandName}</span> : null
+                    }
+                </div>
                 <div className={styles.divDiscs}>
                     <label className={styles.labelDiscs}>Discs</label>
                     <input 
@@ -105,51 +106,63 @@ const APIForm = ({name}) => {
                         className={styles.buttonDiscs}
                         onClick={handleDiscs}
                     >X</button>
-                </div>
-                {
-                    errors?.bandDiscs ? <span className={styles.spanErrors}>{errors.bandDiscs}</span> : null
-                }
-                <label>Genres</label>
-                <div className={styles.divGenres}>
                     {
-                        allGenres.map(genre => {
-                            return <button 
-                                        type="button"
-                                        key={genre._id}
-                                        id={genre._id}
-                                        value={genre.name}
-                                        onClick={handleGenres}
-                                        className={styles.genreBtn} 
-                                    >{genre.name}</button>
+                        band?.bandDiscs && band.bandDiscs.map((fakeBand, index) => {
+                            return <p key={index}>{fakeBand}</p>
                         })
                     }
+                    <br />
+                    {
+                        errors?.bandDiscs ? <span className={styles.spanErrors}>{errors.bandDiscs}</span> : null
+                    }
                 </div>
-                {
-                    errors?.bandGenres ? <span className={styles.spanErrors}>{errors.bandGenres}</span> : null
-                }
-                <label>Band Start Date</label>
-                <input 
-                    type="date" 
-                    name="startDate"
-                    value={band.startDate}
-                    onChange={handleChange}
-                />
-                {
-                    errors?.startDate ? <span className={styles.spanErrors}>{errors.startDate}</span> : null
-                }
-                <label>Number of Members</label>
-                <input 
-                    type="text" 
-                    name="numbOfMembers"
-                    value={band.numbOfMembers}
-                    onChange={handleChange}
-                />
-                {
-                    errors?.numbOfMembers ? <span className={styles.spanErrors}>{errors.numbOfMembers}</span> : null
-                }
+                <div className={styles.divGenres}>
+                    <label>Genres</label>
+                    <div className={styles.divGenre}>
+                        {
+                            allGenres.map(genre => {
+                                return <button 
+                                            type="button"
+                                            key={genre._id}
+                                            id={genre._id}
+                                            value={genre.name}
+                                            onClick={handleGenres}
+                                            className={styles.genreBtn} 
+                                        >{genre.name}</button>
+                            })
+                        }
+                    </div>
+                    {
+                        errors?.bandGenres ? <span className={styles.spanErrors}>{errors.bandGenres}</span> : null
+                    }
+                </div>
+                <div className={styles.divDate}>
+                    <label>Band Start Date</label>
+                    <input 
+                        type="date" 
+                        name="startDate"
+                        value={band.startDate}
+                        onChange={handleChange}
+                    />
+                    {
+                        errors?.startDate ? <span className={styles.spanErrors}>{errors.startDate}</span> : null
+                    }
+                </div>
+                <div className={styles.divMembers}>
+                    <label>Number of Members</label>
+                    <input 
+                        type="text" 
+                        name="numbOfMembers"
+                        value={band.numbOfMembers}
+                        onChange={handleChange}
+                    />
+                    {
+                        errors?.numbOfMembers ? <span className={styles.spanErrors}>{errors.numbOfMembers}</span> : null
+                    }
+                </div>
                 <br />
-                <button type="submit" id="sentBtn">Send</button>
             </fieldset>
+            <button type="submit" id="sentBtn">Send</button>
         </form>
     )
 }
