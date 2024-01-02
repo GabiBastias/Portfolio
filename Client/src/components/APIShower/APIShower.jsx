@@ -7,6 +7,11 @@ import APIForm from "./APIForm";
 const APIShower = () => {
     const [id, setId] = useState("");
     const [deleteId, setDeleteId] = useState("");
+    const [formManipulation, setFormManipulation] = useState({
+        manipulate: false,
+        formName: "",
+        bandId: ""
+    });
     const allBands = useSelector(state => state.allBands);
     const dispatch = useDispatch();
 
@@ -17,6 +22,18 @@ const APIShower = () => {
 
     const handleBands = () => {
         dispatch(getAllFakeBands());
+    }
+
+    const handleForm = (event) => {
+        if (event.target.value === "") {
+            setFormManipulation({...formManipulation, manipulate: true, formName: event.target.value});
+        } else {
+            setFormManipulation({...formManipulation, manipulate: true, formName: event.target.value, bandId: id});
+        }
+    }
+
+    const handleClose = () => {
+        setFormManipulation(false)
     }
 
     return(
@@ -41,15 +58,22 @@ const APIShower = () => {
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
                     <summary>Create Fake Band </summary>
-                    <APIForm/>
+                    <br />
+                    <button onClick={handleForm} value="Create Fake Band">Create Fake Band</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
                     <summary>Update complete Fake Band (PUT) </summary>
-                    <APIForm/>
+                    <br />
+                    <input onChange={handleChange} name="id" value={id} type="text" placeholder="Insert the ID..."/>
+                    <button onClick={() => {dispatch(getBandById(id)); setId("")}}>X</button>
+                    <br />
+                    <br />
+                    <button onClick={handleForm} value="Update Fake Band">Update Fake Band</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
                     <summary>Update some Fake Band field (PATCH) </summary>
-                    <APIForm/>
+                    <br />
+                    <button onClick={handleForm} value="Patch Fake Band">Patch Fake Band</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
                     <summary>Delete Band by ID </summary>
@@ -58,6 +82,7 @@ const APIShower = () => {
                     <button onClick={() => {dispatch(deleteFakeBandById(deleteId)); setDeleteId("")}}>X</button>
                 </details>
             </div>
+            <APIForm manipulate={formManipulation} handleClose={handleClose}/>
             <section className={styles.sectionAPIShower}>
                 <div className={styles.divView}>
                     <pre className={styles.data}>{JSON.stringify(allBands, null, 2)}</pre>

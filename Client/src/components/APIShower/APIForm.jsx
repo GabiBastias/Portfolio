@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import styles from "./apiShower.module.css";
 import inputCreateValidator from "../../services/validator/inputAPICreateValidator";
 import { useDispatch, useSelector } from "react-redux";
 import { createRandomFakeBandByBody, getAllFakeGenres } from "../../services/redux/actions";
 
-const APIForm = () => {
+const APIForm = ({ manipulate, handleClose }) => {
 
     const dispatch = useDispatch();
     const allGenres = useSelector(state => state.allGenres);
@@ -27,8 +28,27 @@ const APIForm = () => {
     }
 
     useEffect(() => {
-        console.log(band.bandDiscs);
-    },[band])
+        const divAPIForm = (document.getElementById("APIForm")).classList;
+        console.log(manipulate);
+        if (manipulate.manipulate) {
+            divAPIForm.remove("showOrNot");
+            divAPIForm.add("formCreateBand");
+        } else {
+            divAPIForm.add("showOrNot");
+            divAPIForm.remove("formCreateBand");
+        }
+    },[manipulate])
+
+    const clearBand = () => {
+        handleClose();
+        setBand({
+            bandName: "",
+            bandDiscs: [],
+            bandGenres: [],
+            startDate: "",
+            numbOfMembers: ""
+        });
+    }
 
     const handleGenres = (event) => {
         const genresId = document.getElementById(event.target.id);
@@ -55,30 +75,25 @@ const APIForm = () => {
     }
 
     const handleSubmit = (type, event) => {
-        dispatch(getAllFakeGenres())
         event.preventDefault();
+        dispatch(getAllFakeGenres())
         console.log(type);
         console.log(band);
         alert("good")
         if (type === 'Create Fake Band') {
             dispatch(createRandomFakeBandByBody(band))
+        } else if (type === 'Update Fake Band') {
+            dispatch(createRandomFakeBandByBody(band))
+        } else if (type === 'Patch Fake Band') {
+            dispatch(createRandomFakeBandByBody(band))
         }
-        setBand({
-            bandName: "",
-            bandDiscs: [],
-            bandGenres: [],
-            startDate: "",
-            numbOfMembers: ""
-        });
-
+        clearBand();
     }
 
-    // console.log(band.bandGenres);
-
     return(
-        <form className={styles.formCreateBand} onSubmit={() => handleSubmit(name)}>
-                        
+        <form id="APIForm" className={styles.showOrNot} onSubmit={() => handleSubmit(manipulate.formName)}> 
             <fieldset className={styles.fieldsetCreateBand}>
+                <legend>{manipulate.formName}</legend>
                 <div className={styles.divName}>
                     <label>Band Name</label>
                     <input 
@@ -93,24 +108,28 @@ const APIForm = () => {
                 </div>
                 <div className={styles.divDiscs}>
                     <label className={styles.labelDiscs}>Discs</label>
-                    <input 
-                        type="text"
-                        name="bandDiscs"
-                        id="bandDiscs"
-                        placeholder="Insert ONE Disc at time"
-                        onChange={handleChange}
-                        className={styles.inputDiscs}
-                    />
-                    <button 
-                        type="submit" 
-                        className={styles.buttonDiscs}
-                        onClick={handleDiscs}
-                    >X</button>
-                    {
-                        band?.bandDiscs && band.bandDiscs.map((fakeBand, index) => {
-                            return <p key={index}>{fakeBand}</p>
-                        })
-                    }
+                    <div className={styles.divDiscTags}>
+                        <input 
+                            type="text"
+                            name="bandDiscs"
+                            id="bandDiscs"
+                            placeholder="Insert ONE Disc at time"
+                            onChange={handleChange}
+                            className={styles.inputDiscs}
+                        />
+                        <button 
+                            type="submit" 
+                            className={styles.buttonDiscs}
+                            onClick={handleDiscs}
+                        >X</button>
+                    </div>
+                    <div className={styles.divBandDisc}>
+                        {
+                            band?.bandDiscs && band.bandDiscs.map((fakeBand, index) => {
+                                return <p key={index}>{fakeBand}</p>
+                            })
+                        }
+                    </div>
                     <br />
                     {
                         errors?.bandDiscs ? <span className={styles.spanErrors}>{errors.bandDiscs}</span> : null
@@ -162,7 +181,9 @@ const APIForm = () => {
                 </div>
                 <br />
             </fieldset>
-            <button type="submit" id="sentBtn">Send</button>
+            <br />
+            <button type="submit" id="sentBtn" className={styles.btnSubmit}>Send</button>
+            <button type="button" onClick={clearBand} className={styles.btnClose}>X</button>
         </form>
     )
 }

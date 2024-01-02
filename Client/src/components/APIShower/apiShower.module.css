@@ -70,28 +70,24 @@ summary{
     padding: 1rem;
 }
 
-.formCreateBand{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .fieldsetCreateBand{
-    width: 90%;
+    background-color: #0d0d0d;
+    width: 50vw;
+    height: 50vh;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(2, 10vw);
     grid-template-rows: repeat(3, 5vh);
-    grid-column-gap: 10px;
-    grid-row-gap: 70px;
+    grid-column-gap: 10vw;
+    grid-row-gap: 15vh;
     justify-items: center;
     justify-content: center;
 }
     
 .divName {
     width: max-content;
-    height: max-content;
+    height: auto;
+    gap: 3px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -103,17 +99,36 @@ summary{
 
 .divDiscs {
     width: max-content;
-    height: 100px;
+    height: 20vh;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: 1 / 2 / 2 / 3; 
+    gap: 3px;
+}
+
+.divDiscTags{
+    display: flex;
+    gap: 3px;
+}
+
+.divBandDisc {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2px;
     overflow: hidden;
+}
+  
+.divBandDisc p {
+    width: calc(50% - 10px);
+    margin-bottom: 0px;
 }
 
 .divGenres{
+    gap: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,7 +151,8 @@ summary{
     width: 80%;
 }
 
-.divDate { 
+.divDate {
+    gap: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,6 +165,7 @@ summary{
 }
 
 .divMembers { 
+    gap: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,4 +179,16 @@ summary{
 
 .spanErrors{
     color: red;
+}
+
+.btnSubmit{
+    width: 12vw;
+    height: 3vh;
+    font-size: larger;
+}
+
+.btnClose{
+    position: absolute;
+    right: 25vw;
+    top: 25vh;
 }
