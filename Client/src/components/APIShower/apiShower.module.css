@@ -97,6 +97,10 @@ summary{
     grid-area: 1 / 1 / 2 / 2; 
 }
 
+.inputName{
+    z-index: 20;
+}
+
 .divDiscs {
     width: max-content;
     height: 20vh;

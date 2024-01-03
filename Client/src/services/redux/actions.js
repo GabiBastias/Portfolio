@@ -72,11 +72,11 @@ export const createRandomFakeBandByBody = (fakeBand) => {
             const response = await fetch(`${backURL}/fakeBands`, {
                 method: 'POST',
                 headers: {
-                    'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(fakeBand)
-            });
+            })
+            .then(res => res.json());
             if (response.error) throw Error(response.error);
             alert(response.message);
             return dispatch({

@@ -3,33 +3,33 @@ import { useEffect, useState } from "react";
 import styles from "./apiShower.module.css";
 import inputCreateValidator from "../../services/validator/inputAPICreateValidator";
 import { useDispatch, useSelector } from "react-redux";
-import { createRandomFakeBandByBody, getAllFakeGenres } from "../../services/redux/actions";
+import { createRandomFakeBandByBody } from "../../services/redux/actions";
+
+const emptyBand = {
+    bandName: "",
+    bandDiscs: [],
+    bandGenres: [],
+    startDate: "",
+    numbOfMembers: ""
+}
 
 const APIForm = ({ manipulate, handleClose }) => {
 
     const dispatch = useDispatch();
     const allGenres = useSelector(state => state.allGenres);
 
-    const [ band, setBand ] = useState({
-        bandName: "",
-        bandDiscs: [],
-        bandGenres: [],
-        startDate: "",
-        numbOfMembers: ""
-    });
+    const [ band, setBand ] = useState(emptyBand);
 
     const [ errors, setErrors ] = useState();
 
     const handleDiscs = (event) => {
         event.preventDefault();
         const findId = document.getElementById("bandDiscs");
-        console.log(findId.value);
         setBand({...band, bandDiscs: [...band.bandDiscs, findId.value]})
     }
 
     useEffect(() => {
         const divAPIForm = (document.getElementById("APIForm")).classList;
-        console.log(manipulate);
         if (manipulate.manipulate) {
             divAPIForm.remove("showOrNot");
             divAPIForm.add("formCreateBand");
@@ -66,19 +66,15 @@ const APIForm = ({ manipulate, handleClose }) => {
         if (event.target.name != "bandDiscs") {
             const updateBand = {...band, [event.target.name]: event.target.value}
             setBand(updateBand);
-    
             const validateErrors = inputCreateValidator(updateBand);
             setErrors(validateErrors);
-    
             document.getElementById("sentBtn").disabled = Object.keys(validateErrors).length > 0;
         }
     }
 
-    const handleSubmit = (type, event) => {
+    const handleSubmit = (type) => {
         event.preventDefault();
-        dispatch(getAllFakeGenres())
         console.log(type);
-        console.log(band);
         alert("good")
         if (type === 'Create Fake Band') {
             dispatch(createRandomFakeBandByBody(band))
@@ -101,6 +97,7 @@ const APIForm = ({ manipulate, handleClose }) => {
                         name="bandName"
                         value={band.bandName}
                         onChange={handleChange}
+                        className={styles.inputName}
                     />
                     {
                         errors?.bandName ? <span className={styles.spanErrors}>{errors.bandName}</span> : null
@@ -139,10 +136,10 @@ const APIForm = ({ manipulate, handleClose }) => {
                     <label>Genres</label>
                     <div className={styles.divGenre}>
                         {
-                            allGenres.map(genre => {
+                            allGenres.map((genre, index) => {
                                 return <button 
                                             type="button"
-                                            key={genre._id}
+                                            key={index}
                                             id={genre._id}
                                             value={genre.name}
                                             onClick={handleGenres}
@@ -182,7 +179,7 @@ const APIForm = ({ manipulate, handleClose }) => {
                 <br />
             </fieldset>
             <br />
-            <button type="submit" id="sentBtn" className={styles.btnSubmit}>Send</button>
+            <button disabled={band && emptyBand} type="submit" id="sentBtn" className={styles.btnSubmit} onWheel={(e) => e.target.blur()}>Send</button>
             <button type="button" onClick={clearBand} className={styles.btnClose}>X</button>
         </form>
     )

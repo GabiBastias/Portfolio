@@ -6,7 +6,7 @@ const createFakeBand = async(req, res, next) => {
         if ( !bandName || !bandDiscs || !bandGenres || !startDate || !numbOfMembers ) throw Error("Some info is missing, try again pls.");
 
         const dateNowYear = new Date().getFullYear();
-        const yearStartDate = Number(startDate.split("/").splice(2, 1).join());
+        const yearStartDate = Number(startDate.split("-").splice(0, 1).join());
         const maxYear = dateNowYear - yearStartDate;
 
         const newFakeBand = await FakeBand.create({ band: bandName, discs: bandDiscs, genres: bandGenres, startDate, activeYears: maxYear, numbOfMembers });
