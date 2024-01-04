@@ -31,14 +31,20 @@
     width: 60%;
 }
 
-summary{
-    align-self: baseline;
-}
-
 .detailsAPISh[open] {
     background-color: #000000;
     color: rgb(173, 154, 45);
     text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+}
+
+.divLeft summary{
+    align-self: baseline;
+}
+
+.inputButton{
+    display: flex;
+    gap: 3px;
+    justify-content: center;
 }
 
 .sectionAPIShower{
@@ -83,12 +89,23 @@ summary{
     justify-items: center;
     justify-content: center;
 }
+
+.fieldsetCreateBand label{
+    color: rgb(209, 125, 0);
+    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+}
+
+.fieldsetCreateBand legend{
+    color: rgb(209, 125, 0);
+    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    font-size: x-large;    
+}
     
 .divName {
     width: max-content;
-    height: auto;
+    height: max-content;
     gap: 3px;
-    margin: 0;
+    margin-top: 1vh;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -104,7 +121,7 @@ summary{
 .divDiscs {
     width: max-content;
     height: 20vh;
-    margin: 0;
+    margin-top: 1vh;
     padding: 0;
     display: flex;
     flex-direction: column;

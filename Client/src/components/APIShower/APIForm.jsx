@@ -13,7 +13,7 @@ const emptyBand = {
     numbOfMembers: ""
 }
 
-const APIForm = ({ manipulate, handleClose }) => {
+const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
 
     const dispatch = useDispatch();
     const allGenres = useSelector(state => state.allGenres);
@@ -30,7 +30,7 @@ const APIForm = ({ manipulate, handleClose }) => {
 
     useEffect(() => {
         const divAPIForm = (document.getElementById("APIForm")).classList;
-        if (manipulate.manipulate) {
+        if (manipulate.manipulate === true) {
             divAPIForm.remove("showOrNot");
             divAPIForm.add("formCreateBand");
         } else {
@@ -41,13 +41,8 @@ const APIForm = ({ manipulate, handleClose }) => {
 
     const clearBand = () => {
         handleClose();
-        setBand({
-            bandName: "",
-            bandDiscs: [],
-            bandGenres: [],
-            startDate: "",
-            numbOfMembers: ""
-        });
+        setBand(emptyBand);
+        clearInputAndStyles();
     }
 
     const handleGenres = (event) => {
@@ -66,24 +61,31 @@ const APIForm = ({ manipulate, handleClose }) => {
         if (event.target.name != "bandDiscs") {
             const updateBand = {...band, [event.target.name]: event.target.value}
             setBand(updateBand);
-            const validateErrors = inputCreateValidator(updateBand);
-            setErrors(validateErrors);
-            document.getElementById("sentBtn").disabled = Object.keys(validateErrors).length > 0;
+            if (manipulate.formName != "Patch Fake Band") {
+                const validateErrors = inputCreateValidator(updateBand);
+                setErrors(validateErrors);
+            }
+        }
+    }
+
+    const clearInputAndStyles = () => {
+        document.getElementById('bandDiscs').value = "";
+        for (let i = 0; i < allGenres.length; i++) {
+            document.getElementById(allGenres[i]._id).classList.remove('buttomPressed');
         }
     }
 
     const handleSubmit = (type) => {
         event.preventDefault();
-        console.log(type);
-        alert("good")
         if (type === 'Create Fake Band') {
             dispatch(createRandomFakeBandByBody(band))
         } else if (type === 'Update Fake Band') {
-            dispatch(createRandomFakeBandByBody(band))
+            handleUpdateOrPatch(band, type);
         } else if (type === 'Patch Fake Band') {
-            dispatch(createRandomFakeBandByBody(band))
+            handleUpdateOrPatch(band, type);
         }
         clearBand();
+        clearInputAndStyles();
     }
 
     return(
@@ -179,7 +181,7 @@ const APIForm = ({ manipulate, handleClose }) => {
                 <br />
             </fieldset>
             <br />
-            <button disabled={band && emptyBand} type="submit" id="sentBtn" className={styles.btnSubmit} onWheel={(e) => e.target.blur()}>Send</button>
+            <button disabled={band === emptyBand ? true : false} type="submit" id="sentBtn" className={styles.btnSubmit} onWheel={(e) => e.target.blur()}>Send</button>
             <button type="button" onClick={clearBand} className={styles.btnClose}>X</button>
         </form>
     )

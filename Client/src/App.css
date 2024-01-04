@@ -10,9 +10,10 @@
 }
 
 .buttomPressed{
-  background-color: rgb(255, 222, 218) !important;
+  background-color: rgb(51, 51, 51) !important;
   border: none;
-  color: rgb(132, 0, 255) !important;
+  color: rgb(209, 125, 0);
+  text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
 }
 
 .showOrNot{

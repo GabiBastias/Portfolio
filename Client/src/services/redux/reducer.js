@@ -1,4 +1,4 @@
-import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND } from "./actionTypes";
+import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND, PATCH_BAND, UPDATE_BAND } from "./actionTypes";
 
 const initialState = {
     allBandsCopy: [],
@@ -25,17 +25,27 @@ const reducer = (state = initialState, action) => {
                 allBands: action.payload
             }
         case CREATE_RANDOM_BAND:
-            return{
+            return {
                 ...state,
                 allBands: action.payload
             }
         case CREATE_RANDOM_BAND_BY_BODY:
-            return{
+            return {
                 ...state,
                 allBands: [...state.allBands, action.payload]
             }
+        case UPDATE_BAND:
+            return {
+                ...state,
+                allBands: [action.payload]
+            }
+        case PATCH_BAND:
+            return {
+                ...state,
+                allBands: [action.payload]
+            }
         case DELETE_BAND:
-            return{
+            return {
                 ...state,
                 allBands: action.payload
             }

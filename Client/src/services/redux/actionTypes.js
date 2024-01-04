@@ -3,4 +3,6 @@ export const ALL_GENRES = "ALL_GENRES";
 export const BANDS_BY_ID = "BANDS_BY_ID";
 export const CREATE_RANDOM_BAND = "CREATE_RANDOM_BAND";
 export const CREATE_RANDOM_BAND_BY_BODY = "CREATE_RANDOM_BAND_BY_BODY"; 
+export const UPDATE_BAND = "UPDATE_BAND";
+export const PATCH_BAND = "PATCH_BAND";
 export const DELETE_BAND = "DELETE_BAND";
