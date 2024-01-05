@@ -9,7 +9,7 @@ const updateAllFakeBand = async(req, res, next) => {
         if (req.body.activeYears) throw Error("The active years are automatically update.");
         
         const dateNowYear = new Date().getFullYear();
-        const yearStartDate = Number(startDate.split("/").splice(2, 1).join());
+        const yearStartDate = Number(startDate.split("-").splice(0, 1).join());
         if (yearStartDate > dateNowYear) throw Error("The Starting Date of the Fake Band can't be in the futere.");
         const maxYear = dateNowYear - yearStartDate;
 
