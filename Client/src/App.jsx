@@ -1,10 +1,9 @@
 import './App.css'
 import Nav from './components/Nav/Nav'
-import LandingProfile from './views/LandingProfile/LandingProfile'
+import LandingProfile from './components/LandingProfile/LandingProfile'
 import About from './views/About/About'
 import TheFourthElementProject from './views/Projects/TheFourthElementProject/TheFourthElementProject'
 import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
-import ContactForm from './components/ContactForm/ContactForm'
 import APIShower from './components/APIShower/APIShower'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
@@ -46,11 +45,6 @@ function App() {
           <div className="divScroll" id='FakeBandAPI'>
             <div className='blank'>
               <APIShower />
-            </div>
-          </div>
-          <div className="divScroll" id='Contact'>
-            <div className='blank'>
-              <ContactForm />
             </div>
           </div>
       </main>

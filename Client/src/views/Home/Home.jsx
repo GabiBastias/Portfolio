@@ -1,5 +1,5 @@
 import About from '../About/About';
-import LandingProfile from '../LandingProfile/LandingProfile';
+import LandingProfile from '../../components/LandingProfile/LandingProfile';
 import VideogamesProyect from '../Projects/VideogamesProject/VideogamesProject';
 import TheFourthElementProyect from '../Projects/TheFourthElementProject/TheFourthElementProyect';
 import styles from './home.module.css'
