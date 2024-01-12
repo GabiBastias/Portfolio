@@ -2,7 +2,6 @@ import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_B
 const backURL = import.meta.env.VITE_BACK_URL;
 
 export const languageSelector = (type) => {
-    console.log(type);
     return{
         type: LANGUAJE,
         payload: type

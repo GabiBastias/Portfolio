@@ -4,13 +4,12 @@ const initialState = {
     allBandsCopy: [],
     allBands: [],
     allGenres: [],
-    language: ""
+    language: "Spanish"
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case LANGUAJE:
-            console.log(action.payload);
             return{
                 ...state,
                 language: action.payload

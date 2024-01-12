@@ -54,13 +54,10 @@ const ContactForm = ({manipulate, handleClose, language}) => {
     const handleOnSubmit = (event) => {
         event.preventDefault();
         emailJS.sendForm(serviceEmailID, templateEmailID, form.current, keyEmailID)
-        .then((result) => {
-            console.log(result.text);
-            console.log(result.status);
+        .then(() => {
             alert("Email submited! \nHave a great day, i contact you soon!");
         }, (error) => {
             alert(error.text);
-            console.log(error.text);
         });
         clearForm();
     }
