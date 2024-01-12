@@ -7,6 +7,17 @@ const VideogamesProject = () => {
 
     const language = useSelector(state => state.language);
 
+    const handleObjectives = () => {
+        const btnInfoVg = document.getElementById("btnInfoVg");
+        const divListVg = document.getElementById("divListVg");
+        btnInfoVg.classList.value === "btnObjectives" ?
+            btnInfoVg.classList.value = "btnObjectivesClosed" :
+            btnInfoVg.classList.value = "btnObjectives";
+        divListVg.classList.value === "showOrNot" ?
+            divListVg.classList.value = "divListOpen" :
+            divListVg.classList.value = "showOrNot";
+    }
+
     return(
         <article className={styles.articleVideogames}>
             <img className={styles.backgroundIMG} src={VideogamesIMG} alt="Videogames" />
@@ -25,8 +36,12 @@ const VideogamesProject = () => {
                         <img className={styles.videogamesProjectIMG} src={VideogamesProjectIMG} alt="VideogamesprojectIMG" />
                     </a>
                 </div>
+                <button onClick={handleObjectives} id="btnInfoVg" className="btnObjectives">{language === "Spanish" ? 'Información' : 'Information'}</button>
             </section>
             <div className={styles.divRight}>
+            <section className='showOrNot' id='divListVg'>
+                    <h2 className={styles.h2Objectives}>{language === "Spanish" ? 'En Mantenimiento...' : 'Work in progress...'}</h2>
+                </section>
             </div>
         </article>
     )

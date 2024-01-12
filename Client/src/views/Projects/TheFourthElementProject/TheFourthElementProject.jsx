@@ -7,10 +7,24 @@ const TheFourthElementProject = () => {
 
     const language = useSelector(state => state.language);
 
+    const handleObjectives = () => {
+        const btnInfoTFE = document.getElementById("btnInfoTFE");
+        const divListTFE = document.getElementById("divListTFETFE");
+        btnInfoTFE.classList.value === "btnObjectives" ?
+            btnInfoTFE.classList.value = "btnObjectivesClosed" :
+            btnInfoTFE.classList.value = "btnObjectives";
+        divListTFE.classList.value === "showOrNot" ?
+            divListTFE.classList.value = "divListOpen" :
+            divListTFE.classList.value = "showOrNot";
+    }
+
     return(
         <article className={styles.articleTheFourthElement}>
             <img className={styles.backgroundIMG} src={TheFourthElementIMG} alt="backgroundIMG" />
             <div className={styles.divLeft}>
+                <section className='showOrNot' id='divListTFETFE'>
+                    <h2 className={styles.h2Objectives}>{language === "Spanish" ? 'En Mantenimiento...' : 'Work in progress...'}</h2>
+                </section>
             </div>
             <section className={styles.sectionTheFourthElement}>
                 <h2 className={styles.h1TheFourthElement}>The Fourth Element</h2>
@@ -27,6 +41,7 @@ const TheFourthElementProject = () => {
                         }
                     </a>
                 </div>
+                <button onClick={handleObjectives} id="btnInfoTFE" className="btnObjectives">{language === "Spanish" ? 'Información' : 'Information'}</button>
             </section>
         </article>
     );

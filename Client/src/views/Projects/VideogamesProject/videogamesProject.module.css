@@ -77,12 +77,15 @@
     font-size: larger;
 }
 
-/* .divRight{
-    border: 2px solid green;
+.divRight{
     width: 50%;
-    position: inherit;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
+    flex-direction: column;
+}
+
+.h2Objectives{
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #ffffff, 0 0 20px #000000;
+    width: 40vw;
+}

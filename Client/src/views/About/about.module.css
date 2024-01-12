@@ -50,23 +50,22 @@
     align-items: center;
     flex-direction: column;
     transition: opacity 0.5s ease, visibility 0.5s ease, height 1s ease;
-    cursor: pointer;
-    &:hover {
+    /* &:hover {
         .h2Objectives, .ulObjectives {
             opacity: 1;
             visibility: visible;
             height: auto;
         }
-    }
+    } */
 }
 
-.h2Objectives, .ulObjectives {
+/* .h2Objectives, .ulObjectives {
     opacity: 0;
     visibility: hidden;
     height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-}
+} */
 
 .h2Objectives{
     text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #ffffff, 0 0 20px #000000;
