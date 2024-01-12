@@ -92,12 +92,12 @@ const APIShower = () => {
                     <button onClick={handleForm} value={language === "Spanish" ? 'Actualizar Banda' : 'Update Band'}>{language === "Spanish" ? 'Actualizar Banda' : 'Update Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>{language === "Spanish" ? 'Actualizar Banda parcialmente (PUT)' : 'Update some Fake Band field (PATCH)'} </summary>
+                    <summary>{language === "Spanish" ? 'Actualizar Banda Parcialmente (PATCH)' : 'Update some Fake Band field (PATCH)'} </summary>
                     <br />
                     <input onChange={handleChange} name="patchId" value={patchId} type="text" placeholder={language === "Spanish" ? 'Ingrese el ID' : 'Insert the ID...'}/>
                     <br />
                     <br />
-                    <button onClick={handleForm} value={language === "Spanish" ? 'Parchar Banda' : 'Patch Band'}>{language === "Spanish" ? 'Parchar Banda' : 'Patch Band'}</button>
+                    <button onClick={handleForm} value={language === "Spanish" ? 'Parchar Banda' : 'Patch Band'}>{language === "Spanish" ? 'Actualizar Banda' : 'Patch Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
                     <summary>{language === "Spanish" ? 'Eliminar Banda por ID' : 'Delete Band by ID'} </summary>
