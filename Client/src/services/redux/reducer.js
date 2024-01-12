@@ -1,13 +1,20 @@
-import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND, PATCH_BAND, UPDATE_BAND } from "./actionTypes";
+import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND, LANGUAJE, PATCH_BAND, UPDATE_BAND } from "./actionTypes";
 
 const initialState = {
     allBandsCopy: [],
     allBands: [],
-    allGenres: []
+    allGenres: [],
+    language: ""
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case LANGUAJE:
+            console.log(action.payload);
+            return{
+                ...state,
+                language: action.payload
+            }
         case ALL_BANDS:
             return {
                 ...state,

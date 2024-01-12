@@ -1,11 +1,25 @@
-import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND, PATCH_BAND, UPDATE_BAND } from "./actionTypes";
+import { ALL_BANDS, ALL_GENRES, BANDS_BY_ID, CREATE_RANDOM_BAND, CREATE_RANDOM_BAND_BY_BODY, DELETE_BAND, LANGUAJE, PATCH_BAND, UPDATE_BAND } from "./actionTypes";
 const backURL = import.meta.env.VITE_BACK_URL;
+
+export const languageSelector = (type) => {
+    console.log(type);
+    return{
+        type: LANGUAJE,
+        payload: type
+    }
+}
 
 export const getAllFakeBands = () => {
     return async (dispatch) => {
         try {
             const response = await fetch(`${backURL}/fakeBands`)
-            .then(res => res.json());
+            .then(res => {
+                if (!res.ok) {
+                    console.log('Error');
+                } else {
+                    return res.json()
+                }
+            })
             if (response.error) throw Error(response.error)
             return dispatch({
                     type: ALL_BANDS,

@@ -7,7 +7,7 @@ const serviceEmailID = import.meta.env.VITE_SERVICE_EMAILJS_ID;
 const templateEmailID = import.meta.env.VITE_TEMPLATE_EMAILJS_ID;
 const keyEmailID = import.meta.env.VITE_PUBLIC_KEY_EMAILJS;
 
-const ContactForm = ({manipulate, handleClose}) => {
+const ContactForm = ({manipulate, handleClose, language}) => {
 
     const form = useRef();
 
@@ -68,34 +68,34 @@ const ContactForm = ({manipulate, handleClose}) => {
     return(
         <form className="formContactMe" ref={form} id="contactForm" onSubmit={handleOnSubmit}>
             <fieldset className={styles.fieldsetContactMe}>
-                <legend className={styles.legendContactMe}><b>Contact Me!</b></legend>
-                <label className={styles.labelContactMe} name='user_email'>Email: </label>
+                <legend className={styles.legendContactMe}><b>{language === "Spanish" ? 'Contactame!' : 'Contact Me!'}</b></legend>
+                <label className={styles.labelContactMe} name='user_email'>{language === "Spanish" ? "Correo" : "Email" }</label>
                 <input 
                     type="email" 
                     name="user_email" 
                     value={userMessage.user_email} 
-                    placeholder="Your email..."
+                    placeholder={language === "Spanish" ? "Tu correo..." : "Your email..." }
                     onChange={handleChange}
                 />
                 {
                     errors.user_email ? <span className={styles.spanContactMe}>{errors.user_email}</span> : null
                 }
                 <br />
-                <label className={styles.labelContactMe} name='user_name'>Name: </label>
+                <label className={styles.labelContactMe} name='user_name'>{language === "Spanish" ? "Nombre" : "Name" }</label>
                 <input 
                     type="text" 
                     name="user_name" 
                     value={userMessage.user_name} 
-                    placeholder="Your name..."
+                    placeholder={language === "Spanish" ? "Tu nombre..." : "Your name..." }
                     onChange={handleChange}
                 />
                 {
                     errors.user_name ? <span className={styles.spanContactMe}>{errors.user_name}</span> : null
                 }
                 <br />
-                <label className={styles.labelContactMe} name='message'>Message: </label>
+                <label className={styles.labelContactMe} name='message'>{language === "Spanish" ? "Mensaje" : "Message" }</label>
                 <textarea 
-                    placeholder="Your message..." 
+                    placeholder={language === "Spanish" ? "Tu mensaje..." : "Your message..." }
                     cols="30" rows="10" 
                     name="message" 
                     value={userMessage.message}
@@ -106,7 +106,7 @@ const ContactForm = ({manipulate, handleClose}) => {
                     errors.message ? <span className={styles.spanContactMe}>{errors.message}</span> : null
                 }
                 <br />
-                <button disabled="true" type="submit" id="sentBtn" value="send" >SEND</button>
+                <button disabled="true" type="submit" id="sentBtn" value="send" >{language === "Spanish" ?'ENVIAR':'SEND'}</button>
                 <button type="button" className={styles.btnClose} onClick={clearForm}>X</button>
             </fieldset>
         </form>

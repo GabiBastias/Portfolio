@@ -1,49 +1,68 @@
 import styles from './about.module.css'
 import AboutIMG from '../../assets/img/AboutBlack.png'
-import { useState } from 'react';
+import { useSelector } from 'react-redux'
 
 const About = () => {
-    const [language, setLanguage] = useState('Spanish');
 
-    const handleClick = (event) => {
-        const btnSpanish = document.getElementById('Spanish');
-        const btnEnglish = document.getElementById('English');
-        if (event.target.id === btnSpanish.id) {
-            btnEnglish.classList.remove('buttomPressed');
-            btnSpanish.classList.add('buttomPressed');
+    const language = useSelector(state => state.language);
 
-            setLanguage('Spanish');
-        } else if(event.target.id === btnEnglish.id){
-            btnSpanish.classList.remove('buttomPressed');
-            btnEnglish.classList.add('buttomPressed');
-
-            setLanguage('English');
-        }
-    }
-    
     return(
         <article className={styles.articleAbout}>
             <img className={styles.backgroundIMG} src={AboutIMG} alt="backgroundIMG" />
-            <div className={styles.divLeft}>
-            </div>
             <section className={styles.sectionAbout}>
-                <h2 className={styles.h1About}>About</h2>
-                <h4 className={styles.h4Aboout}>FullStack Web Developer - Testing || Javascript - Node.js - ReactJS & Redux - Express - MongoDB - PostgreSQL - Jest</h4>
-                <aside className={styles.infoAbout}>
-                    {
-                        language === 'Spanish' &&
-                        <p className={styles.pSpanish}>Hola, mi nombre es Federico Gabriel Bastias Cano de Mendoza, Argentina. Comencé a estudiar programación en la facultad y desde entonces me dediqué a reforzar conocimientos y especializarme. Mi objetivo actual es poder brindar mis conocimientos y soluciones de manera ya sea remota o presencial en empresas de desarrollo de sofware.</p>
-                    }
-                    {
-                        language === 'English' &&
-                        <p className={styles.pEnglish}>Hi, my name is Federico Gabriel Bastias Cano from Mendoza, Argentina. I started studying programming in college and since then I dedicated myself to strengthening my knowledge and specializing. My current goal is to be able to work either remotely or in person in software development companies.</p>
-                    }
-                </aside>
-                <div className={styles.divBtn}>
-                    <button className={styles.btnLenguage} onClick={handleClick} id="Spanish">Español</button>
-                    <button className={styles.btnLenguage} onClick={handleClick} id="English">English</button>
-                </div>
+                <h2 className={styles.h2About}>{language === "Spanish" ? 'Sobre Mi' : 'About Me'}</h2>
+                <h4 className={styles.h4Aboout}>FullStack Web Developer</h4>
+                <h4 className={styles.h4Aboout}>Javascript - Node.js - ReactJS & Redux - Express - MongoDB - PostgreSQL - Jest</h4>
+                {
+                    language === "Spanish" &&
+                    <p className={styles.infoAbout}>Estudié la carrera de Técnico Superior en Programación en UTN-FRM, allí aprendí lenguajes de programación como Java y C++, cómo funciona el hardware y cómo interactúa el software con él, pero no he podido terminarla aun. Tambien estudie en un bootcamp llamado Soy Henry!, y aprendí sobre desarrollo web en general. </p>
+                }
+                { language === "Spanish" && <hr />}
+                {
+                    language === "Spanish" &&
+                    <p className={styles.infoAbout}>Como desarrollador Full Stack tengo gran manejo en JavaScript, React, Redux, HTML, CSS, Node.js, Express, Sequelize, PostgreSQL, MongoDB y Jest para testeos unitarios. Me encuentro en estudios para mejorar mis conocimientos en TypeScript y Java utilizando Spring boot, además de poseer experiencia en el control de versiones con Git/GitHub y en técnologias como Figma, LucidChart, Postman, Swagger, entre otras. Puesto que estoy orientado entornos ágiles, destaco por mi liderazgo, proactividad y resolución de problemas.</p>
+                }
+                {
+                    language === "English" &&
+                    <p className={styles.infoAbout}> I studied to be a Higher Technician in Programming at the UTN-FRM, where I learned programming languages such as Java and C++, how hardware works and how software interacts with it, but I have not been able to finish it yet. I also studied in a bootcamp called Soy Henry!, and I learned about the bases of web development.</p>
+                }
+                { language === "English" && <hr />}
+                {
+                    language === "English" &&
+                    <p className={styles.infoAbout}>As a Full Stack Developer I have a great knowledge of JavaScript, React, Redux, HTML, CSS, Node.js, Express, Sequelize, PostgreSQL, MongoDB y Jest for unity testing. At the moment I am studing to improve my knwoledge on TypeScript y Java using Spring boot, in addition to having experience in control version with Git/GitHub and technologies such as Figma, LucidChart, Postman, Swagger, among others. Since I am oriented to agile environments, I stand out for my leadership, proactivity and problem solving.</p>
+                }
             </section>
+            <div className={styles.divRight}>
+                <h2 className={styles.h2Objectives}>{language === "Spanish" ? 'Objetivos' : 'Objectives'}</h2>
+                {
+                    language === "Spanish" &&
+                    <ul className={styles.ulObjectives}>
+                        <li>Ser visto por el mundo del desarrollo como alguien serio, que todos sepan que lo que tengo para ofrecer es acompañado tanto por calidad como por compromiso.</li>
+                        <br />
+                        <li>Comenzar nuevos proyectos para ganar cada vez más experiencia.</li>
+                        <br />
+                        <li>Conseguir mi primer empleo como desarrollador.</li>
+                        <br />
+                        <li>Aprender diferentes lenguajes que puedan ampliar mis conocimientos.</li>
+                        <br />
+                        <li>Reparar errores de mis últimos proyectos, que al fin al cabo son quienes nos muestran al mundo como developers.</li>
+                    </ul>
+                }
+                {
+                    language === "English" &&
+                    <ul className={styles.ulObjectives}>
+                        <li>To be seen by the development world as someone serious, to let everyone know that what I have to offer is accompanied by both quality and commitment.</li>
+                        <br />
+                        <li>Start new projects to gain more and more experience.</li>
+                        <br />
+                        <li>Getting my first job as a developer.</li>
+                        <br />
+                        <li>Learn different languages that can expand my knowledge.</li>
+                        <br />
+                        <li>Repair errors of my last proyects, which in the end are what show us to the world as developers.</li>
+                    </ul>
+                }
+            </div>
         </article>
     );
 }

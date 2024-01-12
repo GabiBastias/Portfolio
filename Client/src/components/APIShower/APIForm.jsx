@@ -13,7 +13,7 @@ const emptyBand = {
     numbOfMembers: ""
 }
 
-const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
+const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch, language }) => {
 
     const dispatch = useDispatch();
     const allGenres = useSelector(state => state.allGenres);
@@ -77,11 +77,11 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
 
     const handleSubmit = (type) => {
         event.preventDefault();
-        if (type === 'Create Fake Band') {
+        if (type === 'Create Fake Band' || type === 'Crear Banda Falsa') {
             dispatch(createRandomFakeBandByBody(band))
-        } else if (type === 'Update Fake Band') {
+        } else if (type === 'Update Fake Band' || type === 'Actualizar Banda') {
             handleUpdateOrPatch(band, type);
-        } else if (type === 'Patch Fake Band') {
+        } else if (type === 'Patch Fake Band' || type === 'Parchar Banda') {
             handleUpdateOrPatch(band, type);
         }
         clearBand();
@@ -93,7 +93,7 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
             <fieldset className={styles.fieldsetCreateBand}>
                 <legend>{manipulate.formName}</legend>
                 <div className={styles.divName}>
-                    <label>Band Name</label>
+                    <label>{language === "Spanish" ? 'Nombre de la Banda' : 'Band Name'}</label>
                     <input 
                         type="text" 
                         name="bandName"
@@ -106,13 +106,13 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
                     }
                 </div>
                 <div className={styles.divDiscs}>
-                    <label className={styles.labelDiscs}>Discs</label>
+                    <label className={styles.labelDiscs}>{language === "Spanish" ? 'Discos' : 'Discs'}</label>
                     <div className={styles.divDiscTags}>
                         <input 
                             type="text"
                             name="bandDiscs"
                             id="bandDiscs"
-                            placeholder="Insert ONE Disc at time"
+                            placeholder={language === "Spanish" ? 'Ingrese UN disco a la vez' : "Insert ONE Disc at time"}
                             onChange={handleChange}
                             className={styles.inputDiscs}
                         />
@@ -135,7 +135,7 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
                     }
                 </div>
                 <div className={styles.divGenres}>
-                    <label>Genres</label>
+                    <label>{language === "Spanish" ? 'Géneros' : "Genres"}</label>
                     <div className={styles.divGenre}>
                         {
                             allGenres.map((genre, index) => {
@@ -155,7 +155,7 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
                     }
                 </div>
                 <div className={styles.divDate}>
-                    <label>Band Start Date</label>
+                    <label>{language === "Spanish" ? 'Fecha de Inicio' : "Band Start Date"}</label>
                     <input 
                         type="date" 
                         name="startDate"
@@ -167,9 +167,9 @@ const APIForm = ({ manipulate, handleClose, handleUpdateOrPatch }) => {
                     }
                 </div>
                 <div className={styles.divMembers}>
-                    <label>Number of Members</label>
+                    <label>{language === "Spanish" ? 'Numero de Integrantes' : "Members Number"}</label>
                     <input 
-                        type="text" 
+                        type="number" 
                         name="numbOfMembers"
                         value={band.numbOfMembers}
                         onChange={handleChange}

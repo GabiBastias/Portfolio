@@ -12,6 +12,21 @@
     z-index: 1;
 }
 
+.divLenguages{
+    gap: 1vh;
+    position: relative;
+    left: 40vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnLenguage{
+    /* margin: 1vw; */
+    border-radius: 10px;
+    border: 0px;
+}
+
 .liNav{
     font-size: x-large;
     color: rgb(173, 154, 45);

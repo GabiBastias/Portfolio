@@ -15,6 +15,7 @@ const APIShower = () => {
         bandId: ""
     });
     const allBands = useSelector(state => state.allBands);
+    const language = useSelector(state => state.language);
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
@@ -58,56 +59,56 @@ const APIShower = () => {
     return(
         <article className={styles.articleAPIShower}>
             <div className={styles.divLeft}>
-                <h2 className={styles.h2APIShower}>Fake Band API-REST:</h2>
+                <h2 className={styles.h2APIShower}>{language === "Spanish" ? 'API de Bandas Falsas: ' : 'Fake Band API-REST: '}</h2>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Get all Fake Bands </summary>
+                    <summary>{language === "Spanish" ? 'Obtener todas las Bandas' : 'Get all Bands'} </summary>
                     <br />
-                    <button onClick={handleBands}>Get all Fake Bands</button>
+                    <button onClick={handleBands}>{language === "Spanish" ? 'Obtener todas las Bandas' : 'Get all Bands'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Get Band by ID </summary>
+                    <summary>{language === "Spanish" ? 'Obtener Banda por ID' : 'Get Band by ID'} </summary>
                     <br />
                     <div className={styles.inputButton}>
-                        <input onChange={handleChange} name="id" value={id} type="text" placeholder="Insert the ID..."/>
+                        <input onChange={handleChange} name="id" value={id} type="text" placeholder={language === "Spanish" ? 'Ingrese el ID' : 'Insert the ID...'}/>
                         <button onClick={() => {dispatch(getBandById(id)); setId("")}}>X</button>
                     </div>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Create Random Fake Band </summary>
+                    <summary>{language === "Spanish" ? 'Crear Banda Falsa Aleatoria' : 'Create Random Fake Band'} </summary>
                     <br />
-                    <button onClick={() => dispatch(createRandomFakeBand())}>Create Random Fake Band</button>
+                    <button onClick={() => dispatch(createRandomFakeBand())}>{language === "Spanish" ? 'Crear Banda Falsa Aleatoria' : 'Create Random Fake Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Create Fake Band </summary>
+                    <summary>{language === "Spanish" ? 'Crear Banda Falsa' : 'Create Fake Band'} </summary>
                     <br />
-                    <button onClick={handleForm} value="Create Fake Band">Create Fake Band</button>
+                    <button onClick={handleForm} value={language === "Spanish" ? 'Crear Banda Falsa' : 'Create Fake Band'}>{language === "Spanish" ? 'Crear Banda Falsa' : 'Create Fake Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Update complete Fake Band (PUT) </summary>
+                    <summary>{language === "Spanish" ? 'Actualizar Banda Completa (PUT)' : 'Update complete Band (PUT)'} </summary>
                     <br />
-                    <input onChange={handleChange} name="updateId" value={updateId} type="text" placeholder="Insert the ID..."/>
+                    <input onChange={handleChange} name="updateId" value={updateId} type="text" placeholder={language === "Spanish" ? 'Ingrese el ID' : 'Insert the ID...'}/>
                     <br />
                     <br />
-                    <button onClick={handleForm} value="Update Fake Band">Update Fake Band</button>
+                    <button onClick={handleForm} value={language === "Spanish" ? 'Actualizar Banda' : 'Update Band'}>{language === "Spanish" ? 'Actualizar Banda' : 'Update Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Update some Fake Band field (PATCH) </summary>
+                    <summary>{language === "Spanish" ? 'Actualizar Banda parcialmente (PUT)' : 'Update some Fake Band field (PATCH)'} </summary>
                     <br />
-                    <input onChange={handleChange} name="patchId" value={patchId} type="text" placeholder="Insert the ID..."/>
+                    <input onChange={handleChange} name="patchId" value={patchId} type="text" placeholder={language === "Spanish" ? 'Ingrese el ID' : 'Insert the ID...'}/>
                     <br />
                     <br />
-                    <button onClick={handleForm} value="Patch Fake Band">Patch Fake Band</button>
+                    <button onClick={handleForm} value={language === "Spanish" ? 'Parchar Banda' : 'Patch Band'}>{language === "Spanish" ? 'Parchar Banda' : 'Patch Band'}</button>
                 </details>
                 <details className={styles.detailsAPISh} name="fakeBand">
-                    <summary>Delete Band by ID </summary>
+                    <summary>{language === "Spanish" ? 'Eliminar Banda por ID' : 'Delete Band by ID'} </summary>
                     <br />
                     <div className={styles.inputButton}>
-                        <input type="text" onChange={handleChange} name="deleteId" value={deleteId}placeholder="Insert the ID..."/>
+                        <input type="text" onChange={handleChange} name="deleteId" value={deleteId}placeholder={language === "Spanish" ? 'Ingrese el ID' : 'Insert the ID...'}/>
                         <button onClick={() => {dispatch(deleteFakeBandById(deleteId)); setDeleteId("")}}>X</button>
                     </div>
                 </details>
             </div>
-            <APIForm manipulate={formManipulation} handleClose={handleClose} handleUpdateOrPatch={handleUpdateOrPatch}/>
+            <APIForm language={language} manipulate={formManipulation} handleClose={handleClose} handleUpdateOrPatch={handleUpdateOrPatch}/>
             <section className={styles.sectionAPIShower}>
                 <div className={styles.divView}>
                     <pre className={styles.data}>{JSON.stringify(allBands, null, 2)}</pre>

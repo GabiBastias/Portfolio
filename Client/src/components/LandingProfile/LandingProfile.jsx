@@ -7,10 +7,12 @@ import resume from '../../assets/img/resume.png'
 import styles from './landingProfile.module.css'
 import { useState } from 'react'
 import ContactForm from '../ContactForm/ContactForm'
+import { useSelector } from 'react-redux'
 
 const LandingProfile = () => {
 
     const [formManipulation, setFormManipulation] = useState(false);
+    const language = useSelector(state => state.language);
 
     const handleForm = () => {
         setFormManipulation(true);
@@ -26,6 +28,14 @@ const LandingProfile = () => {
             <div className={styles.divLeft}>
             </div>
             <section className={styles.sectionProfile}>
+                {
+                    language === 'Spanish' && 
+                    <h1 className={styles.h1Home}>Hola, me llamo Federico Bastias, Full Stack Web Developer.</h1>
+                }
+                {
+                    language === 'English' &&
+                    <h1 className={styles.h1Home}>Hi, I'm Federico Bastias, Full Stack Web Developer.</h1>
+                }
                 <div className={styles.divIMG}>
                     <a href="https://www.linkedin.com/in/federicobastias/" target="_blank" rel="noreferrer noopener" className={styles.aLinkedIn}>
                         <img className={styles.connectionLinkedIn} src={linkedIn} alt='LinkedIn'/>
@@ -38,11 +48,20 @@ const LandingProfile = () => {
                         <img className={styles.connectionResume} src={resume} alt="resume" />
                     </a>
                     <button onClick={handleForm} className={styles.btnContactMe}> 
-                    Contact</button>
+                    {language === "Spanish" ? 'Contacto' : 'Contact'}</button>
                 </div>
-                <h1 className={styles.h1Home}>Hi, I'm Federico Bastias, Full Stack Developer.</h1>
+                <aside className={styles.infoAbout}>
+                    {
+                        language === 'Spanish' &&
+                        <p className={styles.pSpanish}>Hola, mi nombre es Federico Gabriel Bastias Cano y soy de Mendoza, Argentina.</p>
+                    }
+                    {
+                        language === 'English' &&
+                        <p className={styles.pEnglish}>Hi, my name is Federico Gabriel Bastias Cano from Mendoza, Argentina.</p>
+                    }
+                </aside>
             </section>
-            <ContactForm manipulate={formManipulation} handleClose={handleClose} />
+            <ContactForm language={language} manipulate={formManipulation} handleClose={handleClose} />
         </article>
     )
 }

@@ -69,7 +69,7 @@ const fakeGenres = async() => {
                 await FakeGenre.create({name: newGenre});
             }
         }
-        return await genresList
+        return genresList
     } catch (error) {
         return error.message;
     }
