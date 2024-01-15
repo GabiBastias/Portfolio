@@ -76,36 +76,6 @@ const About = () => {
                         </ul>
                     } 
                 </section>
-
-                {/* <h2 className={styles.h2Objectives}>{language === "Spanish" ? 'Objetivos' : 'Objectives'}</h2>
-                {
-                    language === "Spanish" &&
-                    <ul className={styles.ulObjectives}>
-                        <li>Ser visto por el mundo del desarrollo como alguien serio, que todos sepan que lo que tengo para ofrecer es acompañado tanto por calidad como por compromiso.</li>
-                        <br />
-                        <li>Comenzar nuevos proyectos para ganar cada vez más experiencia.</li>
-                        <br />
-                        <li>Conseguir mi primer empleo como desarrollador.</li>
-                        <br />
-                        <li>Aprender diferentes lenguajes que puedan ampliar mis conocimientos.</li>
-                        <br />
-                        <li>Reparar errores de mis últimos proyectos, que al fin al cabo son quienes nos muestran al mundo como developers.</li>
-                    </ul>
-                }
-                {
-                    language === "English" &&
-                    <ul className={styles.ulObjectives}>
-                        <li>To be seen by the development world as someone serious, to let everyone know that what I have to offer is accompanied by both quality and commitment.</li>
-                        <br />
-                        <li>Start new projects to gain more and more experience.</li>
-                        <br />
-                        <li>Getting my first job as a developer.</li>
-                        <br />
-                        <li>Learn different languages that can expand my knowledge.</li>
-                        <br />
-                        <li>Repair errors of my last proyects, which in the end are what show us to the world as developers.</li>
-                    </ul>
-                } */}
             </div>
         </article>
     );
