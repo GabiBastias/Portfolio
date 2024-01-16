@@ -66,12 +66,12 @@ const VideogamesProject = () => {
                                 <li>Componentizar, desarrollar lógica y enrutar componentes de React.</li>
                                 <li>Diseñar vistas de la aplicación.</li>
                             </ul>
-                            <h3 className={styles.h3Vg}>Front-end</h3>
-                            <p className={styles.infoTecVg}>Next.js</p>
+                            <h3 className={styles.h3Vg}>Tecnologías Front-end</h3>
+                            <p className={styles.infoTecVg}>React.js - React Router DOM - Redux - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Tecnologías Back-end</h3>
-                            <p className={styles.infoTecVg}>Node.js - Express - JWT - Jest & Supertest - Nodemailer - Bcrypt.</p>
+                            <p className={styles.infoTecVg}>Node.js - Express.</p>
                             <h3 className={styles.h3Vg}>Base de Datos</h3>
-                            <p className={styles.infoTecVg}>MongoDB - Moongose ORM.</p>
+                            <p className={styles.infoTecVg}>PostgreSQL - Sequelize.</p>
                         </div>
                     }
                     {
