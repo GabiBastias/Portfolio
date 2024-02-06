@@ -53,11 +53,11 @@ const LandingProfile = () => {
                 <aside className={styles.infoAbout}>
                     {
                         language === 'Spanish' &&
-                        <p className={styles.pSpanish}>Hola, mi nombre es Federico Gabriel Bastias Cano y soy de Mendoza, Argentina.</p>
+                        <p className={styles.pSpanish}>De Mendoza, Argentina para el mundo.</p>
                     }
                     {
                         language === 'English' &&
-                        <p className={styles.pEnglish}>Hi, my name is Federico Gabriel Bastias Cano from Mendoza, Argentina.</p>
+                        <p className={styles.pEnglish}>From Mendoza, Argentina to the world.</p>
                     }
                 </aside>
             </section>

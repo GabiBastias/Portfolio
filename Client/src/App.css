@@ -64,15 +64,3 @@
   border: none;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
 }
-
-.divListOpen{
-  width: 60%;
-  height: auto;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
-}
