@@ -1,8 +1,8 @@
 import styles from './about.module.css'
 import AboutIMG from '../../assets/img/AboutBlack.png'
 import { useSelector } from 'react-redux'
-import Carousel from '../Carousel Standar/Carousel';
-import CarouselAutoplay from '../Carousel Autoplay/CarouselAutoplay';
+import Carousel from '../CarouselStandar/Carousel';
+import CarouselAutoplay from '../CarouselAutoplay/CarouselAutoplay';
 
 const About = () => {
 
