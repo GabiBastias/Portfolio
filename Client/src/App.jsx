@@ -8,6 +8,7 @@ import APIShower from './components/APIShower/APIShower'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { getAllFakeGenres } from './services/redux/actions'
+import Carousel from './views/Carousel/Carousel'
 
 function App() {
 
@@ -45,6 +46,11 @@ function App() {
           <div className="divScroll" id='FakeBandAPI'>
             <div className='blank'>
               <APIShower />
+            </div>
+          </div>
+          <div className="divScroll" id='FakeBandAPI'>
+            <div className='blank'>
+              <Carousel />
             </div>
           </div>
       </main>

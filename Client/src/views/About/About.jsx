@@ -1,42 +1,11 @@
 import styles from './about.module.css'
 import AboutIMG from '../../assets/img/AboutBlack.png'
 import { useSelector } from 'react-redux'
-import { Goals } from './Goals';
-import { useEffect, useRef, useState } from 'react';
+import Carousel from '../Carousel/Carousel';
 
 const About = () => {
 
     const language = useSelector(state => state.language);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const listRef = useRef();
-
-
-    useEffect(() => {
-        const listNode = listRef.current;
-        const goalsNode = listNode.querySelectorAll("li > div")[currentIndex];
-        if (goalsNode) {
-            goalsNode.scrollIntoView({
-                behavior: "smooth"
-            })
-        }
-
-    }, [currentIndex])
-
-
-    
-    const scrollToGoal = (dir) => {
-        if (dir === 'prev'){
-            setCurrentIndex(curr => {
-                const isFirstSlide = currentIndex === 0;
-                return isFirstSlide ? 0 : curr - 1;
-            });
-        } else {
-            const isLastSlide = currentIndex === Goals.length - 1;
-            if (isLastSlide) {
-                setCurrentIndex(currentIndex + 1);
-            }
-        }
-    }
 
     return(
         <article className={styles.articleAbout}>
@@ -48,45 +17,7 @@ const About = () => {
                 {/*Imagenes*/}
             </section>
             <div className={styles.divRight}>
-                <section className={styles.divListOpen}>
-                    <button onClick={() => scrollToGoal('prev')}>prev</button>
-                    <button onClick={() => scrollToGoal('next')}>next</button>
-                    <div className={styles.divInfoCarousel}>
-                        <ul ref={listRef}>
-                            {
-                                Goals.map((goal, index) =>{
-                                    if (goal.title === "Objectives") {
-                                        return <li key={index}>
-                                            <div>
-                                                <h2>{language === "Spanish" ? goal.titulo : goal.title}</h2>
-                                                <ul>
-                                                    {
-                                                        language === "Spanish" ? goal.contenido.map((g, i) => {
-                                                            return <li key={i}>
-                                                                {g}
-                                                            </li>
-                                                        }) : goal.content.map((g, i) => {
-                                                            return <li key={i}>
-                                                                {g}
-                                                            </li>
-                                                        })
-                                                    }
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    } else {
-                                        return <li key={index}>
-                                            <div>
-                                                <h2>{language === "Spanish" ? goal.titulo : goal.title}</h2>
-                                                <p>{language === "Spanish" ? goal.contenido : goal.content}</p>
-                                            </div>
-                                        </li>
-                                    }
-                                })
-                            }
-                        </ul>
-                    </div>
-                </section>
+                <Carousel />
             </div>
         </article>
     );

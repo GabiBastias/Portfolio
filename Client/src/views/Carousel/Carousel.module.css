@@ -1,0 +1,11 @@
+.sectionCarousel{
+    width: 90%;
+    height: auto;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
+}
