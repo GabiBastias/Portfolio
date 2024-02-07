@@ -29,7 +29,6 @@ const CarouselAutoplay = () => {
     }
 
     const settingsTechnologies = {
-        dots: true,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
