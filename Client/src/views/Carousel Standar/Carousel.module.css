@@ -1,5 +1,5 @@
 .sectionCarousel{
-    width: 90%;
+    width: 80%;
     height: auto;
     border-radius: 40px;
     display: flex;
@@ -8,4 +8,18 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
+}
+
+.carousel{
+    padding: 1vw;
+    width: 80%;
+}
+
+.slideCarousel{
+    text-align: left;
+    width: 80%;
+}
+
+.slideCarousel h2{
+    text-align: center;
 }

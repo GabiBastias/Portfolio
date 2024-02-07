@@ -41,3 +41,7 @@ summary, button{
   justify-content: center;
   align-items: center;
 }
+
+.slick-prev:before, .slick-next:before{
+  color: rgb(232, 86, 33);
+}
