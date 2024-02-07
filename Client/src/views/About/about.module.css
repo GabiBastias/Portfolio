@@ -25,15 +25,11 @@
 }
 
 .h2About{
+    position: absolute;
+    left: 30vw;
+    top: 10vh;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
     width: 40vw;
-}
-
-.h4Aboout{
-    color: rgb(173, 154, 45);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
-    width: 70%;
-    margin: 1vh;
 }
 
 .infoAbout{
@@ -47,8 +43,8 @@
     width: 50vw;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     transition: opacity 0.5s ease, visibility 0.5s ease, height 1s ease;
 }
 
