@@ -1,6 +1,11 @@
 import styles from './theFourthElementProject.module.css'
 import TheFourthElementIMG from '../../../assets/img/TheFourthElementBlack.png'
 import TheFourthElementProjectIMG from '../../../assets/img/TheFourthElementProject.png'
+import nextjsICO from "../../../assets/img/svg-icons/nextjs-svgrepo-com.svg"
+import nodejsICO from "../../../assets/img/svg-icons/nodejs-svgrepo-com.svg"
+import expressICO from "../../../assets/img/svg-icons/express-svgrepo-com.svg"
+import jestICO from "../../../assets/img/svg-icons/jest-snapshot-svgrepo-com.svg"
+import mongoDBICO from "../../../assets/img/svg-icons/mongodb-logo-svgrepo-com.svg"
 import { useSelector } from 'react-redux'
 
 const TheFourthElementProject = () => {
@@ -46,11 +51,18 @@ const TheFourthElementProject = () => {
                                 <li>Testear rutas, modelos y utilidades.</li>
                             </ul>
                             <h3 className={styles.h3TFE}>Front-end</h3>
-                            <p className={styles.infoTecTFE}>Next.js</p>
+                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js' width="100px" height="100px"/>
                             <h3 className={styles.h3TFE}>Tecnologías Back-end</h3>
-                            <p className={styles.infoTecTFE}>Node.js - Express - JWT - Jest & Supertest - Nodemailer - Bcrypt.</p>
+                            <div className={styles.dataBases}>
+                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
+                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img src={jestICO} alt="jest" width="100px" height="100px"/>
+                            </div>
+                            <p className={styles.infoTecTFE}>JWT - Supertest - Nodemailer - Bcrypt.</p>
+                            <br />
                             <h3 className={styles.h3TFE}>Base de Datos</h3>
-                            <p className={styles.infoTecTFE}>MongoDB - Moongose ORM.</p>
+                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB" width="100px" height="100px"/>
+                            <p className={styles.infoTecTFE}>Moongose como ORM.</p>
                         </div>
                     }
                     {
@@ -65,11 +77,18 @@ const TheFourthElementProject = () => {
                                 <li>Test routes, models and utils.</li>
                             </ul>
                             <h3 className={styles.h3TFE}>Front-end</h3>
-                            <p className={styles.infoTecTFE}>Next.js</p>
+                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js' width="100px" height="100px"/>
                             <h3 className={styles.h3TFE}>Back-end Technologies</h3>
-                            <p className={styles.infoTecTFE}>Node.js - Express - JWT - Jest & Supertest - Nodemailer - Bcrypt.</p>
+                            <div className={styles.dataBases}>
+                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
+                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img src={jestICO} alt="jest" width="100px" height="100px"/>
+                            </div>
+                            <p className={styles.infoTecTFE}>JWT - Supertest - Nodemailer - Bcrypt.</p>
+                            <br />                            
                             <h3 className={styles.h3TFE}>Data Base</h3>
-                            <p className={styles.infoTecTFE}>MongoDB - Moongose ORM.</p>
+                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB" width="100px" height="100px"/>
+                            <p className={styles.infoTecTFE}>Moongose as ORM.</p>
                         </div>
                     }
                 </section>

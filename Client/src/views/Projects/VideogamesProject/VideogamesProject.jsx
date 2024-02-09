@@ -1,6 +1,11 @@
 import styles from './videogamesProject.module.css'
 import VideogamesIMG from '../../../assets/img/VideogamesBlack.png'
 import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
+import reactICO from "../../../assets/img/svg-icons/react-svgrepo-com.svg"
+import reduxICO from "../../../assets/img/svg-icons/redux-svgrepo-com.svg"
+import nodejsICO from "../../../assets/img/svg-icons/nodejs-svgrepo-com.svg"
+import expressICO from "../../../assets/img/svg-icons/express-svgrepo-com.svg"
+import postgreSQLICO from "../../../assets/img/svg-icons/postgresql-svgrepo-com.svg"
 import { useSelector } from 'react-redux'
 
 const VideogamesProject = () => {
@@ -67,11 +72,19 @@ const VideogamesProject = () => {
                                 <li>Diseñar vistas de la aplicación.</li>
                             </ul>
                             <h3 className={styles.h3Vg}>Tecnologías Front-end</h3>
-                            <p className={styles.infoTecVg}>React.js - React Router DOM - Redux - CSS Modules - Axios.</p>
+                            <div className={styles.dataBases}>
+                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
+                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                            </div>
+                            <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Tecnologías Back-end</h3>
-                            <p className={styles.infoTecVg}>Node.js - Express.</p>
+                            <div className={styles.dataBases}>
+                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
+                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                            </div>
                             <h3 className={styles.h3Vg}>Base de Datos</h3>
-                            <p className={styles.infoTecVg}>PostgreSQL - Sequelize.</p>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <p className={styles.infoTecVg}>Sequelize como ORM.</p>
                         </div>
                     }
                     {
@@ -86,11 +99,19 @@ const VideogamesProject = () => {
                                 <li>Design application views.</li>
                             </ul>
                             <h3 className={styles.h3Vg}>Front-end Technologies</h3>
-                            <p className={styles.infoTecVg}>React.js - React Router DOM - Redux - CSS Modules - Axios.</p>
+                            <div className={styles.dataBases}>
+                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
+                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                            </div>
+                            <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Back-end Technologies</h3>
-                            <p className={styles.infoTecVg}>Node.js - Express.</p>
+                            <div className={styles.dataBases}>
+                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
+                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                            </div>
                             <h3 className={styles.h3Vg}>Data Base</h3>
-                            <p className={styles.infoTecVg}>PostgreSQL - Sequelize.</p>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <p className={styles.infoTecVg}>Sequelize as ORM.</p>
                         </div>
                     }
                 </section>

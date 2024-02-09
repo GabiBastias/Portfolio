@@ -44,36 +44,36 @@ const CarouselAutoplay = () => {
             <h4 className={styles.h4Aboout}>{language === "Spanish" ? 'Técnologías que utilizo' : "Technologies I use"}</h4>
             <Slider className={styles.carousel} {...settingsTechnologies}>
                 <div className={styles.iconSVG}>
-                    <img src={javascriptICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={javascriptICO} alt="javascript" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
-                    <img src={htmlICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={htmlICO} alt="html" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
-                    <img src={cssICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={cssICO} alt="css" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
                     <img src={nodejsICO} alt="node.js" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
-                    <img src={reactICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={reactICO} alt="react.js" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
-                    <img src={reduxICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={reduxICO} alt="redux" width="100px" height="100px"/>
                 </div>
                 <div className={styles.iconSVG}>
-                    <img src={expressICO} alt="node.js" width="100px" height="100px"/>
+                    <img src={expressICO} alt="express" width="100px" height="100px"/>
                 </div>
             </Slider>
             <h4 className={styles.h4Aboout}>{language === "Spanish" ? 'Bases de Datos' : "Data Bases"}</h4>
             <div className={styles.dataBases}>
-                <img src={mongoDBICO} alt="node.js" width="100px" height="100px"/>
-                <img src={postgreSQLICO} alt="node.js" width="100px" height="100px"/>
+                <img src={mongoDBICO} alt="mongoDB" width="100px" height="100px"/>
+                <img src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
             </div>
             <h4 className={styles.h4Aboout}>{language === "Spanish" ? 'Herramientas' : "Additional Tools"}</h4>
             <div className={styles.dataBases}>
-                <img src={figmaICO} alt="node.js" width="100px" height="100px"/>
-                <img src={postmanICO} alt="node.js" width="100px" height="100px"/>
+                <img src={figmaICO} alt="figma" width="100px" height="100px"/>
+                <img src={postmanICO} alt="postman" width="100px" height="100px"/>
             </div>
         </section>
     );
