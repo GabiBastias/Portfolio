@@ -29,7 +29,8 @@ const Nav = ({ scrollToPage }) => {
             <ul className={styles.navList}>
                 <li className={styles.liNav} onClick={() => scrollToPage('Home')}>{languaje === "Spanish" ? 'Inicio' : 'Home'}</li>
                 <li className={styles.liNav} onClick={() => scrollToPage('About')}>{languaje === "Spanish" ? 'Sobre mi' : 'About me'}</li>
-                <li className={styles.liNav} onClick={() => scrollToPage('Projects')}>{languaje === "Spanish" ? 'Proyectos' : 'Projects'}</li>
+                <li className={styles.liNav} onClick={() => scrollToPage('TheFourthElement')}>The Fourth Element</li>
+                <li className={styles.liNav} onClick={() => scrollToPage('Videogames')}>Videogames</li>
                 <li className={styles.liNav} onClick={() => scrollToPage('FakeBandAPI')}>{languaje === "Spanish" ? 'API de Bandas Falsas' : 'Fake Band API'}</li>
             </ul>
         </nav>

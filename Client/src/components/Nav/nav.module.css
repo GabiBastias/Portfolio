@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 99.1%;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -22,7 +22,6 @@
 }
 
 .btnLenguage{
-    /* margin: 1vw; */
     border-radius: 10px;
     border: 0px;
 }

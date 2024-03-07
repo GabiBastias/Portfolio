@@ -1,13 +1,11 @@
 import './App.css'
 import Nav from './components/Nav/Nav'
-import LandingProfile from './components/LandingProfile/LandingProfile'
+import Home from './views/Home/Home'
 import About from './views/About/About'
 import TheFourthElementProject from './views/Projects/TheFourthElementProject/TheFourthElementProject'
 import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
-import APIShower from './components/APIShower/APIShower'
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { getAllFakeGenres } from './services/redux/actions'
+import FakeBandsAPI from './views/Projects/FakeBandsAPI/FakeBandsAPI'
+import { useSelector } from 'react-redux'
 
 function App() {
 
@@ -18,33 +16,29 @@ function App() {
     }
   }
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getAllFakeGenres());
-  },[dispatch])
+  const language = useSelector(state => state.language);
 
   return (
     <>
       <header>
-        <Nav scrollToPage={scrollToPage}/>
+        <Nav scrollToPage={scrollToPage} />
       </header>
       <main className='divHome'>
           <div className="divScroll" id='Home'>
-              <LandingProfile />
+              <Home language={language}/>
           </div>
           <div className="divScroll" id='About'>
-              <About />
+              <About language={language}/>
           </div>
-          <div className="divScroll" id='Projects'>
-              <TheFourthElementProject />
+          <div className="divScroll" id='TheFourthElement'>
+              <TheFourthElementProject language={language}/>
           </div>
-          <div className="divScroll">
-              <VideogamesProject />
+          <div className="divScroll" id='Videogames'>
+              <VideogamesProject language={language}/>
           </div>
           <div className="divScroll" id='FakeBandAPI'>
             <div className='blank'>
-              <APIShower />
+              <FakeBandsAPI language={language}/>
             </div>
           </div>
       </main>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from './videogamesProject.module.css'
 import VideogamesIMG from '../../../assets/img/VideogamesBlack.png'
 import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
@@ -6,11 +7,8 @@ import reduxICO from "../../../assets/img/svg-icons/redux-svgrepo-com.svg"
 import nodejsICO from "../../../assets/img/svg-icons/nodejs-svgrepo-com.svg"
 import expressICO from "../../../assets/img/svg-icons/express-svgrepo-com.svg"
 import postgreSQLICO from "../../../assets/img/svg-icons/postgresql-svgrepo-com.svg"
-import { useSelector } from 'react-redux'
 
-const VideogamesProject = () => {
-
-    const language = useSelector(state => state.language);
+const VideogamesProject = ({ language }) => {
 
     const handleObjectives = (event) => {
         const divListVg = document.getElementById("divListVg");
@@ -118,10 +116,10 @@ const VideogamesProject = () => {
                 <section className='showOrNot' id='divExperienceVg'>
                     <h2 className={styles.h2Objectives}>{language === "Spanish" ? "Experiencia" : "Experience"}</h2>
                     {   language === "Spanish" &&
-                        <h4 className={styles.h4Vg}>Este fue mi primer proyecto individual end-to-end en el que pude trabajar completamente todas las fases del desarrollo web. Desde su comienzo planeando como almacenar la información en una base de datos relacional para generar dichas relaciones entre los juegos y sus géneros, pasando por la parte de servidores y utilizar el ORM y la lógica de Express/Node y así acceder, manipular o eliminar dicha información, y posteriormente pero no menos importante, el lado del cliente donde si bien no se me da muy bien pensar las ideas para que algo quede bonito, pude lograr que cada fragmento de imaginación pudiera quedar plasmado en código y de esta manera verse reflejado en las vistas del mismo.</h4>
+                        <p className={styles.pVg}>Este fue mi primer proyecto individual end-to-end en el que pude trabajar completamente todas las fases del desarrollo web. Desde su comienzo planeando como almacenar la información en una base de datos relacional para generar dichas relaciones entre los juegos y sus géneros, pasando por la parte de servidores y utilizar el ORM y la lógica de Express/Node y así acceder, manipular o eliminar dicha información, y posteriormente pero no menos importante, el lado del cliente donde si bien no se me da muy bien pensar las ideas para que algo quede bonito, pude lograr que cada fragmento de imaginación pudiera quedar plasmado en código y de esta manera verse reflejado en las vistas del mismo.</p>
                     }
                     {   language === "English" &&
-                        <h4 className={styles.h4Vg}>This was my first individual end-to-end project in which I was able to fully work on all phases of web development. From the beginning, planning how to store information in a relational database to generate these relationships between games and their genres, passing through the servers and using the ORM and Express/Node logic and thus access, manipulate or eliminate said information, and later but no less important, the client side where although I am not very good at thinking of ideas to make something look beautiful, I was able to ensure that each fragment of imagination could be captured in code and in this way be reflected in the views of it.</h4>
+                        <p className={styles.pVg}>This was my first individual end-to-end project in which I was able to fully work on all phases of web development. From the beginning, planning how to store information in a relational database to generate these relationships between games and their genres, passing through the servers and using the ORM and Express/Node logic and thus access, manipulate or eliminate said information, and later but no less important, the client side where although I am not very good at thinking of ideas to make something look beautiful, I was able to ensure that each fragment of imagination could be captured in code and in this way be reflected in the views of it.</p>
                     }
                 </section>
             </div>

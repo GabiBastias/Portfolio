@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,12 +14,9 @@ import postgreSQLICO from "../../assets/img/svg-icons/postgresql-svgrepo-com.svg
 import mongoDBICO from "../../assets/img/svg-icons/mongodb-logo-svgrepo-com.svg"
 import figmaICO from "../../assets/img/svg-icons/figma-svgrepo-com.svg"
 import postmanICO from "../../assets/img/svg-icons/postman-svgrepo-com.svg"
-import { useSelector } from "react-redux";
 
 
-const CarouselAutoplay = () => {
-
-    const language = useSelector(state => state.language);
+const CarouselAutoplay = ({ language }) => {
 
     const SampleArrow = () => {
         return (

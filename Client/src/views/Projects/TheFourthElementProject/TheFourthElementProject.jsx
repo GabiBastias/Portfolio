@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from './theFourthElementProject.module.css'
 import TheFourthElementIMG from '../../../assets/img/TheFourthElementBlack.png'
 import TheFourthElementProjectIMG from '../../../assets/img/TheFourthElementProject.png'
@@ -6,11 +7,8 @@ import nodejsICO from "../../../assets/img/svg-icons/nodejs-svgrepo-com.svg"
 import expressICO from "../../../assets/img/svg-icons/express-svgrepo-com.svg"
 import jestICO from "../../../assets/img/svg-icons/jest-snapshot-svgrepo-com.svg"
 import mongoDBICO from "../../../assets/img/svg-icons/mongodb-logo-svgrepo-com.svg"
-import { useSelector } from 'react-redux'
 
-const TheFourthElementProject = () => {
-
-    const language = useSelector(state => state.language);
+const TheFourthElementProject = ({ language }) => {
 
     const handleObjectives = (event) => {
         const divListTFE = document.getElementById("divListTFE");
@@ -96,11 +94,23 @@ const TheFourthElementProject = () => {
                     <h2 className={styles.h2Objectives}>{language === "Spanish" ? "Experiencia" : "Experience"}</h2>
                     {
                         language === "Spanish" && 
-                        <h4 className={styles.h4TFE}>De éste proyecto tuve que tomar el liderazgo del desarrollo de la parte del servidor, con la ayuda de 2 compañeros no dimos a la tarea de trabajar con tecnologías como JWT (autenticación), Jest y Supertest (para testeo de rutas y modelos de base de datos), mailer(envio de emails a usuarios), mongoose (como ORM), entre otros. Realizando una API-REST para acceder a la base de datos y asi manipular tanto datos de usuarios como de cursos o información reelevante de desbloqueo. Los resultados fueron optimos desde el lado del servido y se aseguró el acceso a la información y las rutas de manera correcta.</h4>
+                        <div>
+                            <p className={styles.pTFE}>En este proyecto, asumí el rol de liderazgo en el desarrollo de la parte del servidor, colaborando con éxito con dos colegas. Nos embarcamos en la tarea de trabajar con tecnologías clave, como JWT para la autenticación, Jest y Supertest para la prueba de rutas y modelos de base de datos, mailer para el envío de correos electrónicos a los usuarios, y mongoose como ORM, entre otras.</p>
+
+                            <p className={styles.pTFE}>Creamos una API-REST para acceder de manera eficiente a la base de datos, permitiendo la manipulación precisa de datos relacionados con usuarios, cursos y otra información relevante para el desbloqueo de funcionalidades. Los resultados obtenidos fueron óptimos desde el lado del servidor, garantizando un acceso preciso y seguro a la información y las rutas.</p>
+                            
+                            <p className={styles.pTFE}>Mi liderazgo en la implementación de la parte del servidor fue esencial para el éxito del proyecto, asegurando una colaboración efectiva entre el equipo y una implementación fluida de las tecnologías seleccionadas.</p>
+                        </div>
                     }
                     {
                         language === "English" && 
-                        <h4 className={styles.h4TFE}>In this project I had to take the lead in the development of the server part, with the help of 2 colleagues we took on the task of working with technologies such as JWT (authentication), Jest and Supertest (for testing routes and database models), mailer (sending emails to users), mongoose (as ORM), among others. Performing a REST-API to access the database and thus manipulate both user and course data or relevant unlocking information. The results were optimal from the service side and access to information and routes was ensured correctly.</h4>
+                        <div>
+                            <p className={styles.pTFE}>In this project, I took on the leadership role in the development of the server side, successfully collaborating with two colleagues. We embarked on the task of working with key technologies, such as JWT for authentication, Jest and Supertest for testing routes and database models, mailer for sending emails to users, and mongoose as ORM, among others.</p>
+
+                            <p className={styles.pTFE}>We created a REST-API to efficiently access the database, allowing precise manipulation of data related to users, courses and other information relevant to unlocking functionalities. The results obtained were optimal from the server side, guaranteeing precise and secure access to information and routes.</p>
+
+                            <p className={styles.pTFE}>My leadership in the implementation of the server side was essential to the success of the project, ensuring effective collaboration between the team and a smooth implementation of the selected technologies.</p>
+                        </div>
                     }
                 </section>
             </div>

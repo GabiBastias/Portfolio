@@ -1,4 +1,4 @@
-.articleTheFourthElement{
+.articleFakeBandsAPI{
     display: flex;
     position: relative;
     width: 100%;
@@ -28,7 +28,7 @@
     width: 40vw;
 }
 
-.h3TFE{
+.h3FBA{
     text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #ffffff, 0 0 20px #000000;
     margin: 0;
 }
@@ -45,21 +45,21 @@
     filter: drop-shadow(3px 3px 3px rgb(232, 86, 33));
 }
 
-.divTFE{
+.divFBA{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.infoTFE{
+.infoFBA{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     width: 80%;
     text-align: start;
 }
 
-.infoTecTFE{
+.infoTecFBA{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     width: 80%;
@@ -67,13 +67,13 @@
     margin-bottom: 2vh;
 }
 
-.pTFE{
+.pFBA{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
     margin: 3vh;
 }
 
-.sectionTheFourthElement{
+.sectionFakeBandsAPI{
     width: 50%;
     position: relative;
     display: flex;
@@ -82,7 +82,7 @@
     align-items: center;
 }
 
-.h1TheFourthElement{
+.h1FakeBandsAPI{
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
     width: 40vw;
 }
@@ -118,14 +118,14 @@
     align-items: center;
 }
 
-.theFourthElementProjectIMG{
+.FakeBandAPIProjectIMG{
     width: 35vw;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     transition: 0.4s;
 }
 
-.pInfoTheFourthElement{
+.pInfoFakeBandsAPI{
     width: 30vw;
     position: absolute;
     display: none;
