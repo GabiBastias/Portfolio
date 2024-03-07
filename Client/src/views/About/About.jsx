@@ -1,22 +1,20 @@
+/* eslint-disable react/prop-types */
 import styles from './about.module.css'
 import AboutIMG from '../../assets/img/AboutBlack.png'
-import { useSelector } from 'react-redux'
 import Carousel from '../CarouselStandar/Carousel';
 import CarouselAutoplay from '../CarouselAutoplay/CarouselAutoplay';
 
-const About = () => {
-
-    const language = useSelector(state => state.language);
+const About = ({ language }) => {
 
     return(
         <article className={styles.articleAbout}>
             <img className={styles.backgroundIMG} src={AboutIMG} alt="backgroundIMG" />
-            <h2 className={styles.h2About}>{language === "Spanish" ? 'Sobre Mi' : 'About Me'}</h2>
+            <h2 className={styles.h2About}>{language === "Spanish" ? 'Conóceme mejor' : 'Know me better'}</h2>
             <section className={styles.sectionAbout}>
-                <Carousel />
+                <Carousel language={language}/>
             </section>
             <section className={styles.divRight}>
-                <CarouselAutoplay />
+                <CarouselAutoplay language={language}/>
             </section>
         </article>
     );

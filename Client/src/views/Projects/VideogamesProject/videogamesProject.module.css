@@ -40,7 +40,7 @@
 }
 
 .divImgP:hover{
-    box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
+    box-shadow: rgb(152, 33, 232) 0px 0px 20px 3px;
     .videogamesProjectIMG{
         filter: blur(0.2rem) brightness(40%);
         width: 45vw;
@@ -67,8 +67,8 @@
 }
 
 .pInfoVideogamesProject{
-    color: rgb(173, 154, 45);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    color: rgb(224, 106, 195);
+    text-shadow: 0 0 5px #9821e8, 0 0 10px #a032e9, 0 0 15px #a54ddf, 0 0 20px #b27ed4;
     width: 30vw;
     position: absolute;
     display: none;
@@ -96,15 +96,17 @@
 }
 
 .iconSVG{
-    filter: drop-shadow(2px 2px 2px rgb(232, 86, 33));
+    filter: drop-shadow(2px 2px 2px rgb(152, 33, 232));
+    width: 3vw;
+    height: 6vh;
 }
 
 .dataBases{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
-    filter: drop-shadow(3px 3px 3px rgb(232, 86, 33));
+    gap: 2vw;
+    margin: 1vh;
 }
 
 .divVg{
@@ -116,21 +118,21 @@
 
 .infoVg{
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    text-shadow: 0 0 5px #9821e8, 0 0 10px #a032e9, 0 0 15px #a54ddf, 0 0 20px #b27ed4;
     width: 80%;
     text-align: start;
 }
 
 .infoTecVg{
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    text-shadow: 0 0 5px #9821e8, 0 0 10px #a032e9, 0 0 15px #a54ddf, 0 0 20px #b27ed4;
     width: 80%;
     text-align: center;
     margin-bottom: 2vh;
 }
 
-.h4Vg{
+.pVg{
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    text-shadow: 0 0 5px #9821e8, 0 0 10px #a032e9, 0 0 15px #a54ddf, 0 0 20px #b27ed4;
     margin: 3vh;
 }

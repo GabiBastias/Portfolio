@@ -1,4 +1,4 @@
-.articleTheFourthElement{
+.articleFakeBandsAPI{
     display: flex;
     position: relative;
     width: 100%;
@@ -28,13 +28,13 @@
     width: 40vw;
 }
 
-.h3TFE{
+.h3FBA{
     text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #ffffff, 0 0 20px #000000;
     margin: 0;
 }
 
 .iconSVG{
-    filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+    filter: drop-shadow(2px 2px 2px rgb(17, 0, 255));
     width: 3vw;
     height: 6vh;
 }
@@ -45,37 +45,44 @@
     align-items: center;
     gap: 2vw;
     margin: 1vh;
+    & img{
+        filter: drop-shadow(2px 2px 2px rgb(17, 0, 255));
+        width: 3vw;
+        height: 6vh;
+    }
 }
 
-.divTFE{
+.divFBA{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 40vw;
+    height: 65vh;
 }
 
-.infoTFE{
-    color: rgb(255, 98, 98);
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
+.infoFBA{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #1100ff, 0 0 10px #4a3dff, 0 0 15px #8279ff, 0 0 20px #b3aeff;
     width: 80%;
     text-align: start;
 }
 
-.infoTecTFE{
-    color: rgb(255, 98, 98);
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
+.infoTecFBA{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #1100ff, 0 0 10px #4a3dff, 0 0 15px #8279ff, 0 0 20px #b3aeff;
     width: 80%;
     text-align: center;
     margin-bottom: 2vh;
 }
 
-.pTFE{
-    color: rgb(255, 98, 98);
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
+.pFBA{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #1100ff, 0 0 10px #4a3dff, 0 0 15px #8279ff, 0 0 20px #b3aeff;
     margin: 3vh;
 }
 
-.sectionTheFourthElement{
+.sectionFakeBandsAPI{
     width: 50%;
     position: relative;
     display: flex;
@@ -84,7 +91,7 @@
     align-items: center;
 }
 
-.h1TheFourthElement{
+.h1FakeBandsAPI{
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #000000, 0 0 20px #ffffff;
     width: 40vw;
 }
@@ -100,34 +107,34 @@
 }
 
 .divImgP:hover{
-    box-shadow: rgb(255, 0, 0) 0px 0px 20px 3px;
-    .theFourthElementProjectIMG{
+    box-shadow: rgb(17, 0, 255) 0px 0px 20px 3px;
+    .fakeBandAPIProjectIMG{
         filter: blur(0.2rem) brightness(40%);
         width: 45vw;
     }
-    .pInfoTheFourthElement{
+    .pInfoFakeBandsAPI{
         display: flex;
     }
 }
 
 .link{
     text-decoration: none;
-    color: rgb(255, 98, 98);
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
+    color: rgb(45, 147, 173);
+    text-shadow: 0 0 5px #1100ff, 0 0 10px #4a3dff, 0 0 15px #8279ff, 0 0 20px #b3aeff;
     display: flex;
     justify-content: center;
     transition: 0.4s;
     align-items: center;
 }
 
-.theFourthElementProjectIMG{
+.fakeBandAPIProjectIMG{
     width: 35vw;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     transition: 0.4s;
 }
 
-.pInfoTheFourthElement{
+.pInfoFakeBandsAPI{
     width: 30vw;
     position: absolute;
     display: none;

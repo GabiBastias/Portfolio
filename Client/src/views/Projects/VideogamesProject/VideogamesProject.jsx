@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from './videogamesProject.module.css'
 import VideogamesIMG from '../../../assets/img/VideogamesBlack.png'
 import VideogamesProjectIMG from '../../../assets/img/VideogamesProject.png'
@@ -6,11 +7,8 @@ import reduxICO from "../../../assets/img/svg-icons/redux-svgrepo-com.svg"
 import nodejsICO from "../../../assets/img/svg-icons/nodejs-svgrepo-com.svg"
 import expressICO from "../../../assets/img/svg-icons/express-svgrepo-com.svg"
 import postgreSQLICO from "../../../assets/img/svg-icons/postgresql-svgrepo-com.svg"
-import { useSelector } from 'react-redux'
 
-const VideogamesProject = () => {
-
-    const language = useSelector(state => state.language);
+const VideogamesProject = ({ language }) => {
 
     const handleObjectives = (event) => {
         const divListVg = document.getElementById("divListVg");
@@ -18,7 +16,7 @@ const VideogamesProject = () => {
 
         if (event.target.id === 'btnInfoVg') {
             if(divListVg.classList.value === "showOrNot"){
-                divListVg.classList.value = "divListOpen";
+                divListVg.classList.value = "divListOpenVG";
                 divExperience.classList.value = "showOrNot";
             } else{
                 divListVg.classList.value = "showOrNot";
@@ -26,7 +24,7 @@ const VideogamesProject = () => {
         } else if (event.target.id === 'btnExperienceVg') {
 
             if (divExperience.classList.value === "showOrNot") {
-                divExperience.classList.value = "divListOpen";
+                divExperience.classList.value = "divListOpenVG";
                 divListVg.classList.value = "showOrNot";
             } else {
                 divExperience.classList.value = "showOrNot";
@@ -73,17 +71,17 @@ const VideogamesProject = () => {
                             </ul>
                             <h3 className={styles.h3Vg}>Tecnologías Front-end</h3>
                             <div className={styles.dataBases}>
-                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
-                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={reactICO} alt='react.js'/>
+                                <img className={styles.iconSVG}src={reduxICO} alt="redux"/>
                             </div>
                             <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Tecnologías Back-end</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
                             </div>
                             <h3 className={styles.h3Vg}>Base de Datos</h3>
-                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL"/>
                             <p className={styles.infoTecVg}>Sequelize como ORM.</p>
                         </div>
                     }
@@ -100,17 +98,17 @@ const VideogamesProject = () => {
                             </ul>
                             <h3 className={styles.h3Vg}>Front-end Technologies</h3>
                             <div className={styles.dataBases}>
-                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
-                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={reactICO} alt='react.js'/>
+                                <img className={styles.iconSVG}src={reduxICO} alt="redux"/>
                             </div>
                             <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Back-end Technologies</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
                             </div>
                             <h3 className={styles.h3Vg}>Data Base</h3>
-                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL"/>
                             <p className={styles.infoTecVg}>Sequelize as ORM.</p>
                         </div>
                     }
@@ -118,10 +116,10 @@ const VideogamesProject = () => {
                 <section className='showOrNot' id='divExperienceVg'>
                     <h2 className={styles.h2Objectives}>{language === "Spanish" ? "Experiencia" : "Experience"}</h2>
                     {   language === "Spanish" &&
-                        <h4 className={styles.h4Vg}>Este fue mi primer proyecto individual end-to-end en el que pude trabajar completamente todas las fases del desarrollo web. Desde su comienzo planeando como almacenar la información en una base de datos relacional para generar dichas relaciones entre los juegos y sus géneros, pasando por la parte de servidores y utilizar el ORM y la lógica de Express/Node y así acceder, manipular o eliminar dicha información, y posteriormente pero no menos importante, el lado del cliente donde si bien no se me da muy bien pensar las ideas para que algo quede bonito, pude lograr que cada fragmento de imaginación pudiera quedar plasmado en código y de esta manera verse reflejado en las vistas del mismo.</h4>
+                        <p className={styles.pVg}>Este fue mi primer proyecto individual end-to-end en el que pude trabajar completamente todas las fases del desarrollo web. Desde su comienzo planeando como almacenar la información en una base de datos relacional para generar dichas relaciones entre los juegos y sus géneros, pasando por la parte de servidores y utilizar el ORM y la lógica de Express/Node y así acceder, manipular o eliminar dicha información, y posteriormente pero no menos importante, el lado del cliente donde si bien no se me da muy bien pensar las ideas para que algo quede bonito, pude lograr que cada fragmento de imaginación pudiera quedar plasmado en código y de esta manera verse reflejado en las vistas del mismo.</p>
                     }
                     {   language === "English" &&
-                        <h4 className={styles.h4Vg}>This was my first individual end-to-end project in which I was able to fully work on all phases of web development. From the beginning, planning how to store information in a relational database to generate these relationships between games and their genres, passing through the servers and using the ORM and Express/Node logic and thus access, manipulate or eliminate said information, and later but no less important, the client side where although I am not very good at thinking of ideas to make something look beautiful, I was able to ensure that each fragment of imagination could be captured in code and in this way be reflected in the views of it.</h4>
+                        <p className={styles.pVg}>This was my first individual end-to-end project in which I was able to fully work on all phases of web development. From the beginning, planning how to store information in a relational database to generate these relationships between games and their genres, passing through the servers and using the ORM and Express/Node logic and thus access, manipulate or eliminate said information, and later but no less important, the client side where although I am not very good at thinking of ideas to make something look beautiful, I was able to ensure that each fragment of imagination could be captured in code and in this way be reflected in the views of it.</p>
                     }
                 </section>
             </div>

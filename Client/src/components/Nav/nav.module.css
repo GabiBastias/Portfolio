@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 99.1%;
     height: 10vh;
     display: flex;
     justify-content: center;
@@ -22,17 +22,8 @@
 }
 
 .btnLenguage{
-    /* margin: 1vw; */
     border-radius: 10px;
     border: 0px;
-}
-
-.liNav{
-    font-size: x-large;
-    color: rgb(173, 154, 45);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
-    transition: 0.5s;
-    cursor: pointer;
 }
 
 .navList{
