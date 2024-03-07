@@ -34,15 +34,17 @@
 }
 
 .iconSVG{
-    filter: drop-shadow(2px 2px 2px rgb(232, 86, 33));
+    filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+    width: 3vw;
+    height: 6vh;
 }
 
 .dataBases{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
-    filter: drop-shadow(3px 3px 3px rgb(232, 86, 33));
+    gap: 2vw;
+    margin: 1vh;
 }
 
 .divTFE{
@@ -53,23 +55,23 @@
 }
 
 .infoTFE{
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    color: rgb(255, 98, 98);
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
     width: 80%;
     text-align: start;
 }
 
 .infoTecTFE{
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    color: rgb(255, 98, 98);
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
     width: 80%;
     text-align: center;
     margin-bottom: 2vh;
 }
 
 .pTFE{
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    color: rgb(255, 98, 98);
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
     margin: 3vh;
 }
 
@@ -98,7 +100,7 @@
 }
 
 .divImgP:hover{
-    box-shadow: rgb(232, 86, 33) 0px 0px 20px 3px;
+    box-shadow: rgb(255, 0, 0) 0px 0px 20px 3px;
     .theFourthElementProjectIMG{
         filter: blur(0.2rem) brightness(40%);
         width: 45vw;
@@ -110,8 +112,8 @@
 
 .link{
     text-decoration: none;
-    color: rgb(173, 154, 45);
-    text-shadow: 0 0 5px #ff5429, 0 0 10px #ff7563, 0 0 15px #ff6d63, 0 0 20px #ff8763;
+    color: rgb(255, 98, 98);
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
     display: flex;
     justify-content: center;
     transition: 0.4s;

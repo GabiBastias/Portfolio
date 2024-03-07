@@ -16,14 +16,14 @@ const TheFourthElementProject = ({ language }) => {
 
         if (event.target.id === 'btnInfoTFE') {
             if(divListTFE.classList.value === "showOrNot"){
-                divListTFE.classList.value = "divListOpen";
+                divListTFE.classList.value = "divListOpenTFE";
                 divExperience.classList.value = "showOrNot";
             } else{
                 divListTFE.classList.value = "showOrNot";
             }
         } else if (event.target.id === 'btnExperienceTFE') {
             if (divExperience.classList.value === "showOrNot") {
-                divExperience.classList.value = "divListOpen";
+                divExperience.classList.value = "divListOpenTFE";
                 divListTFE.classList.value = "showOrNot";
             } else {
                 divExperience.classList.value = "showOrNot";
@@ -49,17 +49,17 @@ const TheFourthElementProject = ({ language }) => {
                                 <li>Testear rutas, modelos y utilidades.</li>
                             </ul>
                             <h3 className={styles.h3TFE}>Front-end</h3>
-                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js' width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js'/>
                             <h3 className={styles.h3TFE}>Tecnologías Back-end</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
-                                <img src={jestICO} alt="jest" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
+                                <img className={styles.iconSVG} src={jestICO} alt="jest"/>
                             </div>
                             <p className={styles.infoTecTFE}>JWT - Supertest - Nodemailer - Bcrypt.</p>
                             <br />
                             <h3 className={styles.h3TFE}>Base de Datos</h3>
-                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB"/>
                             <p className={styles.infoTecTFE}>Moongose como ORM.</p>
                         </div>
                     }
@@ -75,17 +75,17 @@ const TheFourthElementProject = ({ language }) => {
                                 <li>Test routes, models and utils.</li>
                             </ul>
                             <h3 className={styles.h3TFE}>Front-end</h3>
-                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js' width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={nextjsICO} alt='next.js'/>
                             <h3 className={styles.h3TFE}>Back-end Technologies</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
-                                <img src={jestICO} alt="jest" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
+                                <img className={styles.iconSVG} src={jestICO} alt="jest"/>
                             </div>
                             <p className={styles.infoTecTFE}>JWT - Supertest - Nodemailer - Bcrypt.</p>
                             <br />                            
                             <h3 className={styles.h3TFE}>Data Base</h3>
-                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={mongoDBICO} alt="mongoDB"/>
                             <p className={styles.infoTecTFE}>Moongose as ORM.</p>
                         </div>
                     }

@@ -6,11 +6,25 @@ import TheFourthElementProject from './views/Projects/TheFourthElementProject/Th
 import VideogamesProject from './views/Projects/VideogamesProject/VideogamesProject'
 import FakeBandsAPI from './views/Projects/FakeBandsAPI/FakeBandsAPI'
 import { useSelector } from 'react-redux'
+import { useState } from 'react'
 
 function App() {
 
+  const [liStyles, setLiStyles] = useState("liNav");
+
   const scrollToPage = (page) => {
     const element = document.getElementById(page);
+    
+    if (page === "TheFourthElement") {
+      setLiStyles("liNavTFE");
+    } else if (page === "Videogames") {
+      setLiStyles("liNavVG");
+    } else if (page === "FakeBandAPI") {
+      setLiStyles("liNavFBA");
+    } else {
+      setLiStyles("liNav");
+    }
+
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -21,7 +35,7 @@ function App() {
   return (
     <>
       <header>
-        <Nav scrollToPage={scrollToPage} />
+        <Nav scrollToPage={scrollToPage} color={liStyles} />
       </header>
       <main className='divHome'>
           <div className="divScroll" id='Home'>
@@ -37,9 +51,7 @@ function App() {
               <VideogamesProject language={language}/>
           </div>
           <div className="divScroll" id='FakeBandAPI'>
-            <div className='blank'>
               <FakeBandsAPI language={language}/>
-            </div>
           </div>
       </main>
     </>

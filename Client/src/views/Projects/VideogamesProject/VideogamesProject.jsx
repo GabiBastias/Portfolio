@@ -16,7 +16,7 @@ const VideogamesProject = ({ language }) => {
 
         if (event.target.id === 'btnInfoVg') {
             if(divListVg.classList.value === "showOrNot"){
-                divListVg.classList.value = "divListOpen";
+                divListVg.classList.value = "divListOpenVG";
                 divExperience.classList.value = "showOrNot";
             } else{
                 divListVg.classList.value = "showOrNot";
@@ -24,7 +24,7 @@ const VideogamesProject = ({ language }) => {
         } else if (event.target.id === 'btnExperienceVg') {
 
             if (divExperience.classList.value === "showOrNot") {
-                divExperience.classList.value = "divListOpen";
+                divExperience.classList.value = "divListOpenVG";
                 divListVg.classList.value = "showOrNot";
             } else {
                 divExperience.classList.value = "showOrNot";
@@ -71,17 +71,17 @@ const VideogamesProject = ({ language }) => {
                             </ul>
                             <h3 className={styles.h3Vg}>Tecnologías Front-end</h3>
                             <div className={styles.dataBases}>
-                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
-                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={reactICO} alt='react.js'/>
+                                <img className={styles.iconSVG}src={reduxICO} alt="redux"/>
                             </div>
                             <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Tecnologías Back-end</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
                             </div>
                             <h3 className={styles.h3Vg}>Base de Datos</h3>
-                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL"/>
                             <p className={styles.infoTecVg}>Sequelize como ORM.</p>
                         </div>
                     }
@@ -98,17 +98,17 @@ const VideogamesProject = ({ language }) => {
                             </ul>
                             <h3 className={styles.h3Vg}>Front-end Technologies</h3>
                             <div className={styles.dataBases}>
-                                <img src={reactICO} alt='react.js' width="100px" height="100px"/>
-                                <img src={reduxICO} alt="redux" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={reactICO} alt='react.js'/>
+                                <img className={styles.iconSVG}src={reduxICO} alt="redux"/>
                             </div>
                             <p className={styles.infoTecVg}>React Router DOM - CSS Modules - Axios.</p>
                             <h3 className={styles.h3Vg}>Back-end Technologies</h3>
                             <div className={styles.dataBases}>
-                                <img src={nodejsICO} alt='node.js' width="100px" height="100px"/>
-                                <img src={expressICO} alt="express" width="100px" height="100px"/>
+                                <img className={styles.iconSVG} src={nodejsICO} alt='node.js'/>
+                                <img className={styles.iconSVG} src={expressICO} alt="express"/>
                             </div>
                             <h3 className={styles.h3Vg}>Data Base</h3>
-                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL" width="100px" height="100px"/>
+                            <img className={styles.iconSVG} src={postgreSQLICO} alt="postgreSQL"/>
                             <p className={styles.infoTecVg}>Sequelize as ORM.</p>
                         </div>
                     }
