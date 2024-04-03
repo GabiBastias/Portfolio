@@ -18,10 +18,16 @@
     filter: drop-shadow(3px 3px 3px rgb(232, 86, 33));
 }
 
+.iconSVGImg{
+    filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+    width: 50vw;
+    height: 6vh;
+}
+
 .dataBases{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
+    gap: 0vw;
     filter: drop-shadow(3px 3px 3px rgb(232, 86, 33));
 }
