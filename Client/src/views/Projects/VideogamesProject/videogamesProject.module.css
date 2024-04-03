@@ -62,7 +62,7 @@
 .videogamesProjectIMG{
     width: 35vw;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 90px;
     transition: 0.4s;
 }
 
@@ -134,5 +134,5 @@
 .pVg{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px #9821e8, 0 0 10px #a032e9, 0 0 15px #a54ddf, 0 0 20px #b27ed4;
-    margin: 3vh;
+    margin: 2vh;
 }

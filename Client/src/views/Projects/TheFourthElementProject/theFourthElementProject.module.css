@@ -72,7 +72,7 @@
 .pTFE{
     color: rgb(255, 98, 98);
     text-shadow: 0 0 5px #ff0000, 0 0 10px #ff1d1d, 0 0 15px #fd3636, 0 0 20px #ff4a4a;
-    margin: 3vh;
+    margin: 2vh;
 }
 
 .sectionTheFourthElement{
@@ -123,7 +123,7 @@
 .theFourthElementProjectIMG{
     width: 35vw;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 90px;
     transition: 0.4s;
 }
 

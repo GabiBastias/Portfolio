@@ -9,8 +9,13 @@ body{
   margin: 0;
 }
 
-p{
+h2{
+  font-size: 1.3vw;
+}
+
+p, li{
   margin: 0;
+  font-size: 1.8vh;
 }
 
 summary, button{

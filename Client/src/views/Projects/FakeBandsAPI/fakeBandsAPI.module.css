@@ -79,7 +79,7 @@
 .pFBA{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px #1100ff, 0 0 10px #4a3dff, 0 0 15px #8279ff, 0 0 20px #b3aeff;
-    margin: 3vh;
+    margin: 2vh;
 }
 
 .sectionFakeBandsAPI{
@@ -130,7 +130,7 @@
 .fakeBandAPIProjectIMG{
     width: 35vw;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 30px 90px;
     transition: 0.4s;
 }
 

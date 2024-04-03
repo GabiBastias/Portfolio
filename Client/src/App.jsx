@@ -11,6 +11,23 @@ import { useState } from 'react'
 function App() {
 
   const [liStyles, setLiStyles] = useState("liNav");
+  const language = useSelector(state => state.language);
+  
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    if (scrollY >= 920 && scrollY <= 1838){
+      setLiStyles("liNavTFE");
+    } else if (scrollY >= 1839 && scrollY <= 2757){
+      setLiStyles("liNavVG");
+    } else if (scrollY >= 2758 && scrollY <= 3680){
+      setLiStyles("liNavFBA");
+    } else if (scrollY < 920){
+      setLiStyles("liNav");
+    }
+  };
+ 
+  window.addEventListener('scroll', handleScroll);
+  
 
   const scrollToPage = (page) => {
     const element = document.getElementById(page);
@@ -29,8 +46,6 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-  const language = useSelector(state => state.language);
 
   return (
     <>
